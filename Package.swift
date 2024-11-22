@@ -37,7 +37,10 @@ let package = Package(
                 .product(name: "LyraMotion", package: "LyraMotion"),
                 .product(name: "LyraCardsRecognizer", package: "ios-cards-camera-recognizer")
             ],
-            path: "Sources/LyraPaymentSDKDependencies"
+            path: "Sources/LyraPaymentSDKDependencies",
+            resources: [
+                .process("LyraCardsRecognizer.bundle") // Incluye recursos si es necesario
+            ]
         )
     ]
 )
