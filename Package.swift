@@ -1,6 +1,8 @@
 // swift-tools-version:5.7
 import PackageDescription
 
+import PackageDescription
+
 let package = Package(
     name: "LyraPaymentSDK",
     platforms: [
@@ -9,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "LyraPaymentSDK",
-            targets: ["LyraPaymentSDK"]
+            targets: ["LyraPaymentSDKWrapper"]
         )
     ],
     dependencies: [],
@@ -22,10 +24,10 @@ let package = Package(
             name: "Sentry",
             path: "./Sentry.xcframework"
         ),
-      //  .binaryTarget(
-        //    name: "SnapKit",
-          //  path: "./SnapKit.xcframework"
-        //),
+        .binaryTarget(
+            name: "SnapKit",
+            path: "./SnapKit.xcframework"
+        ),
         .binaryTarget(
             name: "LyraMaterial",
             path: "./LyraMaterial.xcframework"
@@ -37,6 +39,27 @@ let package = Package(
         .binaryTarget(
             name: "LyraCardsRecognizer",
             path: "./LyraCardsRecognizer.xcframework"
+        ),
+        .binaryTarget(
+            name: "sentry_client_cocoa",
+            path: "./sentry_client_cocoa.xcframework"
+        ),
+        .target(
+            name: "LyraPaymentSDKWrapper",
+            dependencies: [
+                .target(name: "LyraPaymentSDK"),
+                .target(name: "Sentry"),
+                .target(name: "LyraMaterial"),
+                .target(name: "LyraMotion"),
+                .target(name: "LyraCardsRecognizer"),
+                .target(name: "SnapKit"),
+                .target(name: "sentry_client_cocoa")
+            ],
+            path: "./Sources",
+            linkerSettings: [
+                .linkedFramework("Foundation"),
+                .linkedFramework("UIKit")
+            ]
         )
     ]
 )
