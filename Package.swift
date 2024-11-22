@@ -29,6 +29,7 @@ let package = Package(
         .target(
             name: "LyraPaymentSDKDependencies",
             dependencies: [
+                .target(name: "LyraPaymentSDK"),
                 "SnapKit",
                 "Sentry",
                 "sentry-client-cocoa",
@@ -36,7 +37,7 @@ let package = Package(
                 "Motion",
                 "ios-cards-camera-recognizer"
             ],
-            path: "./Dummy"
+            path: "./Sources/Dummy" 
         )
     ]
 )
