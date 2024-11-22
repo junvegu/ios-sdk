@@ -1,0 +1,11 @@
+framework module sentry_client_cocoa {
+  umbrella header "sentry_client_cocoa.h"
+  export *
+
+  module * { export * }
+}
+
+module sentry_client_cocoa.Swift {
+  header "sentry_client_cocoa-Swift.h"
+  requires objc
+}

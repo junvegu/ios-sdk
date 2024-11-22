@@ -1,4 +1,3 @@
-
 // swift-tools-version:5.7
 import PackageDescription
 
@@ -10,37 +9,34 @@ let package = Package(
     products: [
         .library(
             name: "LyraPaymentSDK",
-            targets: ["LyraPaymentSDKDependencies"]
+            targets: ["LyraPaymentSDK"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1"),
-        .package(url: "https://github.com/getsentry/sentry-cocoa.git", from: "8.36.0"),
-        .package(url: "https://github.com/junvegu/sentry-client-cocoa.git", branch: "master"),
-        .package(url: "https://github.com/junvegu/LyraMaterial.git", branch: "development"),
-        .package(url: "https://github.com/junvegu/LyraMotion.git", from: "4.1.0"),
-        .package(url: "https://github.com/junvegu/ios-cards-camera-recognizer.git", from: "1.1.0")
-    ],
+    dependencies: [],
     targets: [
         .binaryTarget(
             name: "LyraPaymentSDK",
             path: "./LyraPaymentSDK.xcframework"
         ),
-        .target(
-            name: "LyraPaymentSDKDependencies",
-            dependencies: [
-                .target(name: "LyraPaymentSDK"),
-                .product(name: "SnapKit-Dynamic", package: "SnapKit"),
-                .product(name: "Sentry", package: "sentry-cocoa"),
-                .product(name: "sentry_client_cocoa", package: "sentry-client-cocoa"),
-                .product(name: "LyraMaterial", package: "LyraMaterial"), // Correcto
-                .product(name: "LyraMotion", package: "LyraMotion"),
-                .product(name: "LyraCardsRecognizer", package: "ios-cards-camera-recognizer")
-            ],
-            path: "Sources/LyraPaymentSDKDependencies",
-            resources: [
-                .process("LyraCardsRecognizer.bundle") // Incluye recursos si es necesario
-            ]
+        .binaryTarget(
+            name: "Sentry",
+            path: "./Sentry.xcframework"
+        ),
+      //  .binaryTarget(
+        //    name: "SnapKit",
+          //  path: "./SnapKit.xcframework"
+        //),
+        .binaryTarget(
+            name: "LyraMaterial",
+            path: "./LyraMaterial.xcframework"
+        ),
+        .binaryTarget(
+            name: "LyraMotion",
+            path: "./LyraMotion.xcframework"
+        ),
+        .binaryTarget(
+            name: "LyraCardsRecognizer",
+            path: "./LyraCardsRecognizer.xcframework"
         )
     ]
 )

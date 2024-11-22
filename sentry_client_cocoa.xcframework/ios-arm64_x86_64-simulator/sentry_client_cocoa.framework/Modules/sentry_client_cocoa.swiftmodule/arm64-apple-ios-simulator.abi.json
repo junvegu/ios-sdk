@@ -1,0 +1,463 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "sentry_client_cocoa",
+    "printedName": "sentry_client_cocoa",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JavaScriptCore",
+        "printedName": "JavaScriptCore",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa"
+      },
+      {
+        "kind": "Import",
+        "name": "Sentry",
+        "printedName": "Sentry",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Sentry",
+        "printedName": "Sentry",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LyraSentrySDK",
+        "printedName": "LyraSentrySDK",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "testEnvironment",
+            "printedName": "testEnvironment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19sentry_client_cocoa13LyraSentrySDKC15testEnvironmentSSvpZ",
+            "mangledName": "$s19sentry_client_cocoa13LyraSentrySDKC15testEnvironmentSSvpZ",
+            "moduleName": "sentry_client_cocoa",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19sentry_client_cocoa13LyraSentrySDKC15testEnvironmentSSvgZ",
+                "mangledName": "$s19sentry_client_cocoa13LyraSentrySDKC15testEnvironmentSSvgZ",
+                "moduleName": "sentry_client_cocoa",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Options",
+                "printedName": "Sentry.Options",
+                "usr": "c:objc(cs)SentryOptions"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@sentry_client_cocoa@objc(cs)LyraSentrySDK(cm)startWithOptions:",
+            "mangledName": "$s19sentry_client_cocoa13LyraSentrySDKC5start7optionsySo0E7OptionsC_tFZ",
+            "moduleName": "sentry_client_cocoa",
+            "static": true,
+            "overriding": true,
+            "objc_name": "startWithOptions:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@sentry_client_cocoa@objc(cs)LyraSentrySDK",
+        "mangledName": "$s19sentry_client_cocoa13LyraSentrySDKC",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)SentrySDK",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Sentry.SentrySDK",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Sentry",
+        "printedName": "Sentry",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "sentry_client_cocoa"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LyraSentryClient",
+        "printedName": "LyraSentryClient",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "sentry_client_cocoa.LyraSentryClient?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LyraSentryClient",
+                    "printedName": "sentry_client_cocoa.LyraSentryClient",
+                    "usr": "c:@M@sentry_client_cocoa@objc(cs)LyraSentryClient"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Options",
+                "printedName": "Sentry.Options",
+                "usr": "c:objc(cs)SentryOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@sentry_client_cocoa@objc(cs)LyraSentryClient(im)initWithOptions:",
+            "mangledName": "$s19sentry_client_cocoa16LyraSentryClientC7optionsACSgSo0E7OptionsC_tcfc",
+            "moduleName": "sentry_client_cocoa",
+            "overriding": true,
+            "objc_name": "initWithOptions:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@sentry_client_cocoa@objc(cs)LyraSentryClient",
+        "mangledName": "$s19sentry_client_cocoa16LyraSentryClientC",
+        "moduleName": "sentry_client_cocoa",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)SentryClient",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Sentry.SentryClient",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/AppInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 222,
+      "length": 13,
+      "value": "\"Application\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/AppInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 261,
+      "length": 9,
+      "value": "\"AppName\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/AppInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
+      "length": 11,
+      "value": "\"Bundle ID\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/AppInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 9,
+      "value": "\"Version\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/AppInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 390,
+      "length": 11,
+      "value": "\"App Build\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/UIDevice+ModelName.swift",
+      "kind": "StringLiteral",
+      "offset": 3105,
+      "length": 8,
+      "value": "\"Device\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/UIDevice+ModelName.swift",
+      "kind": "StringLiteral",
+      "offset": 3143,
+      "length": 7,
+      "value": "\"Model\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/Util\/UIDevice+ModelName.swift",
+      "kind": "StringLiteral",
+      "offset": 3177,
+      "length": 4,
+      "value": "\"OS\""
+    },
+    {
+      "filePath": "\/Users\/magelasantana\/Documents\/Projects\/SDK\/iOS\/libraries\/sentry_client_cocoa_private\/sentry-client-cocoa\/LyraSentrySDK.swift",
+      "kind": "StringLiteral",
+      "offset": 275,
+      "length": 6,
+      "value": "\"TEST\""
+    }
+  ]
+}

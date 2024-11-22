@@ -1,0 +1,11 @@
+framework module LyraMaterial {
+  umbrella header "LyraMaterial.h"
+  export *
+
+  module * { export * }
+}
+
+module LyraMaterial.Swift {
+  header "LyraMaterial-Swift.h"
+  requires objc
+}

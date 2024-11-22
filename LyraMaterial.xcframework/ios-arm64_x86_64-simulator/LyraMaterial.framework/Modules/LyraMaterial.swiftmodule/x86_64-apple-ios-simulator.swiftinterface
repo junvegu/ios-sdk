@@ -1,0 +1,4015 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name LyraMaterial
+import Accelerate
+import DeveloperToolsSupport
+import Foundation
+@_exported import LyraMaterial
+import LyraMotion
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct Screen {
+  public static var bounds: CoreFoundation.CGRect {
+    get
+  }
+  public static var width: CoreFoundation.CGFloat {
+    get
+  }
+  public static var height: CoreFoundation.CGFloat {
+    get
+  }
+  public static var scale: CoreFoundation.CGFloat {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class RadioButton : LyraMaterial.BaseIconLayerButton {
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+extension Foundation.NSMutableAttributedString {
+  open func updateAttribute(_ name: Foundation.NSAttributedString.Key, value: Any, range: Foundation.NSRange)
+  open func updateAttributes(_ attrs: [Foundation.NSAttributedString.Key : Any], range: Foundation.NSRange)
+  open func removeAttributes(_ attrs: [Foundation.NSAttributedString.Key], range: Foundation.NSRange)
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var bottomNavigationController: LyraMaterial.BottomNavigationController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BottomNavigationController : UIKit.UITabBarController, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) open var isSwipeEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var interactiveSwipeGesture: UIKit.UIPanGestureRecognizer? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public init(viewControllers: [UIKit.UIViewController])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CollectionView : UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) open var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var contentEdgeInsets: LyraMaterial.EdgeInsets {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var scrollDirection: UIKit.UICollectionView.ScrollDirection {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var interimSpace: LyraMaterial.InterimSpace {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @_Concurrency.MainActor(unsafe) public init(collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(CollectionViewCell) @_Concurrency.MainActor(unsafe) open class CollectionViewCell : UIKit.UICollectionViewCell, LyraMaterial.Pulseable {
+  @_Concurrency.MainActor(unsafe) final public let visualLayer: QuartzCore.CAShapeLayer
+  @_Concurrency.MainActor(unsafe) open var pulseAnimation: LyraMaterial.PulseAnimation {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseColor: UIKit.UIColor {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseOpacity: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsRect: CoreFoundation.CGRect {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsCenter: CoreFoundation.CGRect {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsScale: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsGravity: QuartzCore.CALayerContentsGravity {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func pulse(point: CoreFoundation.CGPoint? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CollectionViewLayout : UIKit.UICollectionViewLayout {
+  @_Concurrency.MainActor(unsafe) public var offset: CoreFoundation.CGPoint
+  @_Concurrency.MainActor(unsafe) public var itemSize: CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) public var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentEdgeInsets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor(unsafe) public var contentSize: CoreFoundation.CGSize {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var layoutItems: [(UIKit.UICollectionViewLayoutAttributes, Foundation.NSIndexPath)] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var dataSourceItems: [LyraMaterial.DataSourceItem]? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var scrollDirection: UIKit.UICollectionView.ScrollDirection
+  @_Concurrency.MainActor(unsafe) public var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var interimSpace: LyraMaterial.InterimSpace
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var collectionViewContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LyraMaterial.CollectionViewLayout {
+  @_Concurrency.MainActor(unsafe) public func indexPathsOfItems(in rect: CoreFoundation.CGRect) -> [Foundation.NSIndexPath]
+}
+extension LyraMaterial.CollectionViewLayout {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForElements(in rect: CoreFoundation.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func shouldInvalidateLayout(forBoundsChange newBounds: CoreFoundation.CGRect) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func targetContentOffset(forProposedContentOffset proposedContentOffset: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+}
+@_inheritsConvenienceInitializers @objc(CollectionReusableView) @_Concurrency.MainActor(unsafe) open class CollectionReusableView : UIKit.UICollectionReusableView, LyraMaterial.Pulseable {
+  @_Concurrency.MainActor(unsafe) final public let visualLayer: QuartzCore.CAShapeLayer
+  @_Concurrency.MainActor(unsafe) open var pulseAnimation: LyraMaterial.PulseAnimation {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseColor: UIKit.UIColor {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseOpacity: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsRect: CoreFoundation.CGRect {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsCenter: CoreFoundation.CGRect {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsScale: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsGravity: QuartzCore.CALayerContentsGravity {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var interimSpace: LyraMaterial.InterimSpace {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func pulse(point: CoreFoundation.CGPoint? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @objc deinit
+}
+public struct DataSourceItem {
+  public var data: Any?
+  public var width: CoreFoundation.CGFloat?
+  public var height: CoreFoundation.CGFloat?
+  public init(data: Any? = nil, width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CheckButton : LyraMaterial.BaseIconLayerButton {
+  @_Concurrency.MainActor(unsafe) open var checkmarkColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+public protocol FontType {
+  static func regular(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  static func medium(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  static func bold(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+}
+public struct Font {
+  public static let pointSize: CoreFoundation.CGFloat
+  public static func systemFont(ofSize size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func boldSystemFont(ofSize size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func italicSystemFont(ofSize size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func loadFontIfNeeded(name: Swift.String)
+}
+public struct RobotoFont : LyraMaterial.FontType {
+  public static var pointSize: CoreFoundation.CGFloat {
+    get
+  }
+  public static var thin: UIKit.UIFont {
+    get
+  }
+  public static var light: UIKit.UIFont {
+    get
+  }
+  public static var regular: UIKit.UIFont {
+    get
+  }
+  public static var medium: UIKit.UIFont {
+    get
+  }
+  public static var bold: UIKit.UIFont {
+    get
+  }
+  public static func thin(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func light(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func regular(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func medium(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func bold(with size: CoreFoundation.CGFloat) -> UIKit.UIFont
+}
+public typealias LayoutRelation = UIKit.NSLayoutConstraint.Relation
+@objc(DynamicFontTypeDelegate) public protocol DynamicFontTypeDelegate {
+  @objc func dynamicFontType(dynamicFontType: LyraMaterial.DynamicFontType)
+}
+@_inheritsConvenienceInitializers @objc(DynamicFontType) open class DynamicFontType : ObjectiveC.NSObject {
+  weak open var delegate: (any LyraMaterial.DynamicFontTypeDelegate)?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class NavigationBar : UIKit.UINavigationBar, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) open var willLayout: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) open var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentEdgeInsets: LyraMaterial.EdgeInsets {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var interimSpace: LyraMaterial.InterimSpace {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var backButtonImage: UIKit.UIImage? {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @objc deinit
+}
+extension LyraMaterial.NavigationController {
+  @_Concurrency.MainActor(unsafe) open var statusBarStyle: UIKit.UIStatusBarStyle {
+    get
+    set(value)
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) open class NavigationController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) public init(rootViewController: UIKit.UIViewController, navigationBarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+}
+extension LyraMaterial.NavigationController : UIKit.UINavigationBarDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func navigationBar(_ navigationBar: UIKit.UINavigationBar, shouldPush item: UIKit.UINavigationItem) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func navigationBar(_ navigationBar: UIKit.UINavigationBar, didPop item: UIKit.UINavigationItem)
+}
+extension LyraMaterial.NavigationController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+}
+extension UIKit.UINavigationItem {
+  @_Concurrency.MainActor(unsafe) open var contentViewAlignment: LyraMaterial.ContentViewAlignment {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var contentView: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var backButton: LyraMaterial.IconButton {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var titleLabel: UIKit.UILabel {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var detailLabel: UIKit.UILabel {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var leftViews: [UIKit.UIView] {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var rightViews: [UIKit.UIView] {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var centerViews: [UIKit.UIView] {
+    get
+    set(value)
+  }
+}
+@objc(NavigationDrawerPosition) public enum NavigationDrawerPosition : Swift.Int {
+  case left
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var navigationDrawerController: LyraMaterial.NavigationDrawerController? {
+    get
+  }
+}
+@objc(NavigationDrawerControllerDelegate) public protocol NavigationDrawerControllerDelegate {
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, willOpen position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, didOpen position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, willClose position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, didClose position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, didBeginPanAt point: CoreFoundation.CGPoint, position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, didChangePanAt point: CoreFoundation.CGPoint, position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, didEndPanAt point: CoreFoundation.CGPoint, position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, didTapAt point: CoreFoundation.CGPoint, position: LyraMaterial.NavigationDrawerPosition)
+  @objc optional func navigationDrawerController(navigationDrawerController: LyraMaterial.NavigationDrawerController, statusBar isHidden: Swift.Bool)
+}
+@objc(NavigationDrawerController) @objcMembers @_Concurrency.MainActor(unsafe) open class NavigationDrawerController : LyraMaterial.TransitionController {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftThreshold: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var rightThreshold: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.NavigationDrawerControllerDelegate)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var animationDuration: Swift.Double
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isLeftViewEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isLeftPanGestureEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isLeftTapGestureEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isRightViewEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isRightPanGestureEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isRightTapGestureEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isHiddenStatusBarEnabled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var depthPreset: LyraMaterial.DepthPreset
+  @objc @_Concurrency.MainActor(unsafe) open var leftView: UIKit.UIView? {
+    get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var rightView: UIKit.UIView? {
+    get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var isOpened: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var isLeftViewOpened: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var isRightViewOpened: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var contentViewController: UIKit.UIViewController {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var leftViewController: UIKit.UIViewController? {
+    get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var rightViewController: UIKit.UIViewController? {
+    get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftViewWidth: CoreFoundation.CGFloat {
+    get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var rightViewWidth: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc @_Concurrency.MainActor(unsafe) public init(rootViewController: UIKit.UIViewController, leftViewController: UIKit.UIViewController? = nil, rightViewController: UIKit.UIViewController? = nil)
+  @objc @_Concurrency.MainActor(unsafe) override open func transition(to viewController: UIKit.UIViewController, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @objc @_Concurrency.MainActor(unsafe) override open func prepare()
+  @objc @_Concurrency.MainActor(unsafe) open func setLeftViewWidth(width: CoreFoundation.CGFloat, isHidden: Swift.Bool, animated: Swift.Bool, duration: Foundation.TimeInterval = 0.5)
+  @objc @_Concurrency.MainActor(unsafe) open func setRightViewWidth(width: CoreFoundation.CGFloat, isHidden: Swift.Bool, animated: Swift.Bool, duration: Foundation.TimeInterval = 0.5)
+  @objc @_Concurrency.MainActor(unsafe) open func toggleLeftView(velocity: CoreFoundation.CGFloat = 0)
+  @objc @_Concurrency.MainActor(unsafe) open func toggleRightView(velocity: CoreFoundation.CGFloat = 0)
+  @objc @_Concurrency.MainActor(unsafe) open func openLeftView(velocity: CoreFoundation.CGFloat = 0)
+  @objc @_Concurrency.MainActor(unsafe) open func openRightView(velocity: CoreFoundation.CGFloat = 0)
+  @objc @_Concurrency.MainActor(unsafe) open func closeLeftView(velocity: CoreFoundation.CGFloat = 0)
+  @objc @_Concurrency.MainActor(unsafe) open func closeRightView(velocity: CoreFoundation.CGFloat = 0)
+  @objc deinit
+}
+extension LyraMaterial.NavigationDrawerController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CardCollectionViewCell : LyraMaterial.CollectionViewCell {
+  @_Concurrency.MainActor(unsafe) open var card: LyraMaterial.Card? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc(DisplayStyle) public enum DisplayStyle : Swift.Int {
+  case partial
+  case full
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TransitionController : LyraMaterial.ViewController {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isUserInteractionEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var isTransitioning: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForStatusBarHidden: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForHomeIndicatorAutoHidden: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForScreenEdgesDeferringSystemGestures: UIKit.UIViewController? {
+    @objc get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let container: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) open var rootViewController: UIKit.UIViewController! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutomaticallyForwardAppearanceMethods: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func transition(to viewController: UIKit.UIViewController, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @objc deinit
+}
+@objc(SnackbarStatus) public enum SnackbarStatus : Swift.Int {
+  case visible
+  case hidden
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Snackbar : LyraMaterial.Bar {
+  @_Concurrency.MainActor(unsafe) open var text: Swift.String? {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var attributedText: Foundation.NSAttributedString? {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let textLabel: UIKit.UILabel
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) open var status: LyraMaterial.SnackbarStatus {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc(SnackbarControllerDelegate) public protocol SnackbarControllerDelegate {
+  @objc optional func snackbarController(snackbarController: LyraMaterial.SnackbarController, willShow snackbar: LyraMaterial.Snackbar)
+  @objc optional func snackbarController(snackbarController: LyraMaterial.SnackbarController, didShow snackbar: LyraMaterial.Snackbar)
+  @objc optional func snackbarController(snackbarController: LyraMaterial.SnackbarController, willHide snackbar: LyraMaterial.Snackbar)
+  @objc optional func snackbarController(snackbarController: LyraMaterial.SnackbarController, didHide snackbar: LyraMaterial.Snackbar)
+}
+@objc(SnackbarAlignment) public enum SnackbarAlignment : Swift.Int {
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var snackbarController: LyraMaterial.SnackbarController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SnackbarController : LyraMaterial.TransitionController {
+  @_Concurrency.MainActor(unsafe) final public let snackbar: LyraMaterial.Snackbar
+  @_Concurrency.MainActor(unsafe) open var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.SnackbarControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) open var snackbarAlignment: LyraMaterial.SnackbarAlignment
+  @_Concurrency.MainActor(unsafe) open var snackbarEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var snackbarEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var automaticallyAdjustSnackbarLayoutEdgeInsets: Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func animate(snackbar status: LyraMaterial.SnackbarStatus, delay: Foundation.TimeInterval = 0, animations: ((LyraMaterial.Snackbar) -> Swift.Void)? = nil, completion: ((LyraMaterial.Snackbar) -> Swift.Void)? = nil) -> LyraMotion.MotionCancelBlock?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func reload()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) override public init(rootViewController: UIKit.UIViewController)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CheckButtonGroup : LyraMaterial.BaseButtonGroup<LyraMaterial.CheckButton> {
+  @_Concurrency.MainActor(unsafe) convenience public init(titles: [Swift.String])
+  @_Concurrency.MainActor(unsafe) open var selecetedButtons: [LyraMaterial.CheckButton] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var selectedIndices: [Swift.Int] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) override open func didTap(button: LyraMaterial.CheckButton, at index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var statusBarController: LyraMaterial.StatusBarController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class StatusBarController : LyraMaterial.TransitionController {
+  @_Concurrency.MainActor(unsafe) open var displayStyle: LyraMaterial.DisplayStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var statusBarStyle: UIKit.UIStatusBarStyle {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var isStatusBarHidden: Swift.Bool {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var statusBarOffsetAdjustment: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var shouldHideStatusBarOnRotation: Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public let statusBar: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) override public init(rootViewController: UIKit.UIViewController)
+  @objc deinit
+}
+@objc(SwitchState) public enum SwitchState : Swift.Int {
+  case on
+  case off
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SwitchSize {
+  case small
+  case medium
+  case large
+  case custom(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
+}
+@objc(SwitchDelegate) public protocol SwitchDelegate {
+  @objc func switchDidChangeState(control: LyraMaterial.Switch, state: LyraMaterial.SwitchState)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Switch : UIKit.UIControl, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) open var willLayout: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var trackThickness: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var buttonDiameter: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.SwitchDelegate)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isBounceable: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOnColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOffColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOnImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOffImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trackOnColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trackOffColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOnDisabledColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trackOnDisabledColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOffDisabledColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trackOffDisabledColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOnDisabledImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var buttonOffDisabledImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var track: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var button: LyraMaterial.FABButton {
+    get
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var switchState: LyraMaterial.SwitchState {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var switchSize: LyraMaterial.SwitchSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) public init(state: LyraMaterial.SwitchState = .off, size: LyraMaterial.SwitchSize = .medium)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func reload()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @_Concurrency.MainActor(unsafe) open func toggle(completion: ((LyraMaterial.Switch) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @objc deinit
+}
+extension LyraMaterial.Switch {
+  @_Concurrency.MainActor(unsafe) open func setSwitchState(state: LyraMaterial.SwitchState, animated: Swift.Bool = true, completion: ((LyraMaterial.Switch) -> Swift.Void)? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TabItem : LyraMaterial.FlatButton {
+  @_Concurrency.MainActor(unsafe) @objc override open var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+extension LyraMaterial.TabItem {
+  @_Concurrency.MainActor(unsafe) open func getTabItemColor(for state: LyraMaterial.TabItemState) -> UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) open func setTabItemColor(_ color: UIKit.UIColor, for state: LyraMaterial.TabItemState)
+  @_Concurrency.MainActor(unsafe) open func getTabItemImage(for state: LyraMaterial.TabItemState) -> UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) open func setTabItemImage(_ image: UIKit.UIImage?, for state: LyraMaterial.TabItemState)
+}
+@objc(TabItemState) public enum TabItemState : Swift.Int {
+  case normal
+  case highlighted
+  case selected
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(TabItemLineState) public enum TabItemLineState : Swift.Int {
+  case selected
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(TabBarLineAlignment) public enum TabBarLineAlignment : Swift.Int {
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(TabBarDelegate) public protocol TabBarDelegate {
+  @objc optional func tabBar(tabBar: LyraMaterial.TabBar, shouldSelect tabItem: LyraMaterial.TabItem) -> Swift.Bool
+  @objc optional func tabBar(tabBar: LyraMaterial.TabBar, willSelect tabItem: LyraMaterial.TabItem)
+  @objc optional func tabBar(tabBar: LyraMaterial.TabBar, didSelect tabItem: LyraMaterial.TabItem)
+}
+@objc(TabBarStyle) public enum TabBarStyle : Swift.Int {
+  case auto
+  case nonScrollable
+  case scrollable
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TabBarCenteringStyle {
+  case never
+  case auto
+  case always
+  public static func == (a: LyraMaterial.TabBarCenteringStyle, b: LyraMaterial.TabBarCenteringStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TabBarLineStyle {
+  case auto
+  case fixed(CoreFoundation.CGFloat)
+  case custom((LyraMaterial.TabItem) -> CoreFoundation.CGFloat)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TabBar : LyraMaterial.Bar {
+  @_Concurrency.MainActor(unsafe) open var tabBarStyle: LyraMaterial.TabBarStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var tabBarCenteringStyle: LyraMaterial.TabBarCenteringStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var tabBarLineStyle: LyraMaterial.TabBarLineStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public let scrollView: UIKit.UIScrollView
+  @_Concurrency.MainActor(unsafe) open var isScrollBounceEnabled: Swift.Bool {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.TabBarDelegate)?
+  @_Concurrency.MainActor(unsafe) open var selectedTabItem: LyraMaterial.TabItem? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var tabItemsContentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var tabItemsContentEdgeInsets: LyraMaterial.EdgeInsets {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var tabItemsInterimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var tabItemsInterimSpace: LyraMaterial.InterimSpace {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var tabItems: [LyraMaterial.TabItem] {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public let line: UIKit.UIView
+  @objc @_Concurrency.MainActor(unsafe) open var lineAlignment: LyraMaterial.TabBarLineAlignment {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var lineHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var lineColor: UIKit.UIColor {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension LyraMaterial.TabBar {
+  @_Concurrency.MainActor(unsafe) open func getTabItemColor(for state: LyraMaterial.TabItemState) -> UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) open func setTabItemsColor(_ color: UIKit.UIColor, for state: LyraMaterial.TabItemState)
+  @_Concurrency.MainActor(unsafe) open func getLineColor(for state: LyraMaterial.TabItemLineState) -> UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) open func setLineColor(_ color: UIKit.UIColor, for state: LyraMaterial.TabItemLineState)
+}
+extension LyraMaterial.TabBar {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func select(at index: Swift.Int, completion: ((LyraMaterial.TabItem) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func animate(to tabItem: LyraMaterial.TabItem, completion: ((LyraMaterial.TabItem) -> Swift.Void)? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TableViewCell : UIKit.UITableViewCell, LyraMaterial.Pulseable {
+  @_Concurrency.MainActor(unsafe) final public let visualLayer: QuartzCore.CAShapeLayer
+  @_Concurrency.MainActor(unsafe) open var pulseAnimation: LyraMaterial.PulseAnimation {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseColor: UIKit.UIColor {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseOpacity: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String!)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func pulse(point: CoreFoundation.CGPoint? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @objc deinit
+}
+public enum EditorPlaceholderAnimation {
+  case `default`
+  case hidden
+  public static func == (a: LyraMaterial.EditorPlaceholderAnimation, b: LyraMaterial.EditorPlaceholderAnimation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Editor : LyraMaterial.View, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) final public let textView: LyraMaterial.TextView
+  @_Concurrency.MainActor(unsafe) open var isEditing: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var isEmpty: Swift.Bool {
+    get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderLabel: UIKit.UILabel {
+    @objc get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isPlaceholderAnimated: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var placeholderAnimation: LyraMaterial.EditorPlaceholderAnimation {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderNormalColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderActiveColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderActiveScale: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderVerticalOffset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderHorizontalOffset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerNormalHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerActiveHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerNormalColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerActiveColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let detailLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detail: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detailColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detailVerticalOffset: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func resignFirstResponder() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+}
+extension LyraMaterial.Editor {
+  @_Concurrency.MainActor(unsafe) public var text: Swift.String! {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont? {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) public var placeholder: Swift.String? {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) public var textAlignment: UIKit.NSTextAlignment {
+    get
+    set(value)
+  }
+}
+@objc(TextFieldPlaceholderAnimation) public enum TextFieldPlaceholderAnimation : Swift.Int {
+  case `default`
+  case hidden
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(TextFieldDelegate) public protocol TextFieldDelegate : UIKit.UITextFieldDelegate {
+  @objc optional func textField(textField: LyraMaterial.TextField, didChange text: Swift.String?)
+  @objc optional func textField(textField: LyraMaterial.TextField, willClear text: Swift.String?)
+  @objc optional func textField(textField: LyraMaterial.TextField, didClear text: Swift.String?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TextField : UIKit.UITextField, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isPlaceholderAnimated: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var placeholderAnimation: LyraMaterial.TextFieldPlaceholderAnimation {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var isEmpty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var leftView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftViewWidth: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var leftViewOffset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftViewNormalColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftViewActiveColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerNormalHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerActiveHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerNormalColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var dividerActiveColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var placeholder: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSecureTextEntry: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let placeholderLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderNormalColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderActiveColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderVerticalOffset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderHorizontalOffset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderActiveScale: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let detailLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detail: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detailColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detailVerticalOffset: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var clearIconButton: LyraMaterial.IconButton? {
+    get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isClearIconButtonEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isClearIconButtonAutoHandled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var visibilityIconButton: LyraMaterial.IconButton? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var visibilityIconOn: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var visibilityIconOff: UIKit.UIImage? {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isVisibilityIconButtonEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isVisibilityIconButtonAutoHandled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isPlaceholderUppercasedWhenEditing: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open var textInsets: LyraMaterial.EdgeInsets
+  @_Concurrency.MainActor(unsafe) open var textInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ErrorTextField : LyraMaterial.TextField {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let errorLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var error: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorVerticalOffset: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var isErrorRevealed: Swift.Bool {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc(TextStorageDelegate) public protocol TextStorageDelegate : UIKit.NSTextStorageDelegate {
+  @objc optional func textStorage(textStorage: LyraMaterial.TextStorage, willProcessEditing text: Swift.String, range: Foundation.NSRange)
+  @objc optional func textStorage(textStorage: LyraMaterial.TextStorage, didProcessEditing text: Swift.String, result: Foundation.NSTextCheckingResult?, flags: Foundation.NSRegularExpression.MatchingFlags, stop: Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)
+}
+@objc open class TextStorage : UIKit.NSTextStorage {
+  final public let storage: Foundation.NSMutableAttributedString
+  open var expression: Foundation.NSRegularExpression?
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension LyraMaterial.TextStorage {
+  @objc override dynamic open var string: Swift.String {
+    @objc get
+  }
+  @objc override dynamic open func processEditing()
+  @objc override dynamic open func attributes(at location: Swift.Int, effectiveRange range: Foundation.NSRangePointer?) -> [Foundation.NSAttributedString.Key : Any]
+  @objc override dynamic open func replaceCharacters(in range: Foundation.NSRange, with str: Swift.String)
+  @objc override dynamic open func setAttributes(_ attrs: [Foundation.NSAttributedString.Key : Any]?, range: Foundation.NSRange)
+  @objc override dynamic open func addAttribute(_ name: Foundation.NSAttributedString.Key, value: Any, range: Foundation.NSRange)
+  @objc override dynamic open func removeAttribute(_ name: Foundation.NSAttributedString.Key, range: Foundation.NSRange)
+}
+@objc(TextViewDelegate) public protocol TextViewDelegate : UIKit.UITextViewDelegate {
+  @objc optional func textView(textView: LyraMaterial.TextView, willShowKeyboard value: Foundation.NSValue)
+  @objc optional func textView(textView: LyraMaterial.TextView, willHideKeyboard value: Foundation.NSValue)
+  @objc optional func textView(textView: LyraMaterial.TextView, didShowKeyboard value: Foundation.NSValue)
+  @objc optional func textView(textView: LyraMaterial.TextView, didHideKeyboard value: Foundation.NSValue)
+  @objc optional func textView(textView: LyraMaterial.TextView, willProcessEditing textStorage: LyraMaterial.TextStorage, text: Swift.String, range: Foundation.NSRange)
+  @objc optional func textView(textView: LyraMaterial.TextView, didProcessEditing textStorage: LyraMaterial.TextStorage, text: Swift.String, range: Foundation.NSRange)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TextView : UIKit.UITextView, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) open var isEmpty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var isEditing: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var isKeyboardHidden: Swift.Bool {
+    get
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholder: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let placeholderLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var textContainerInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var textContainerInsets: LyraMaterial.EdgeInsets {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open var pattern: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String! {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var string: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var matches: [Swift.String] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var uniqueMatches: [Swift.String] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) convenience public init(textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var contentSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var isHeightChangeAnimated: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var preferredMaxLayoutHeight: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func insertText(_ text: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func paste(_ sender: Any?)
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+}
+extension LyraMaterial.TextView : LyraMaterial.TextStorageDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textStorage(textStorage: LyraMaterial.TextStorage, willProcessEditing text: Swift.String, range: Foundation.NSRange)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textStorage(textStorage: LyraMaterial.TextStorage, didProcessEditing text: Swift.String, result: Foundation.NSTextCheckingResult?, flags: Foundation.NSRegularExpression.MatchingFlags, stop: Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)
+}
+extension UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var shadowColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var heightPreset: LyraMaterial.HeightPreset {
+    get
+    set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var shapePreset: LyraMaterial.ShapePreset {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var depthPreset: LyraMaterial.DepthPreset {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var depth: LyraMaterial.Depth {
+    get
+    set(value)
+  }
+  @IBInspectable @objc @_Concurrency.MainActor(unsafe) dynamic open var isShadowPathAutoSizing: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var cornerRadiusPreset: LyraMaterial.CornerRadiusPreset {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var borderWidthPreset: LyraMaterial.BorderWidthPreset {
+    @objc get
+    @objc set(value)
+  }
+}
+public typealias LayoutAttribute = UIKit.NSLayoutConstraint.Attribute
+@objc(FABMenuItemTitleLabelPosition) public enum FABMenuItemTitleLabelPosition : Swift.Int {
+  case left
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(FABMenuDirection) public enum FABMenuDirection : Swift.Int {
+  case up
+  case down
+  case left
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FABMenuItem : LyraMaterial.View {
+  @_Concurrency.MainActor(unsafe) final public let titleLabel: UIKit.UILabel
+  @_Concurrency.MainActor(unsafe) open var titleLabelPosition: LyraMaterial.FABMenuItemTitleLabelPosition
+  @_Concurrency.MainActor(unsafe) final public let fabButton: LyraMaterial.FABButton
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) open var title: Swift.String? {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension LyraMaterial.FABMenuItem {
+  @_Concurrency.MainActor(unsafe) open func showTitleLabel()
+  @_Concurrency.MainActor(unsafe) open func hideTitleLabel()
+}
+@objc(FABMenuDelegate) public protocol FABMenuDelegate {
+  @objc optional func fabMenuShouldOpen(fabMenu: LyraMaterial.FABMenu) -> Swift.Bool
+  @objc optional func fabMenuWillOpen(fabMenu: LyraMaterial.FABMenu)
+  @objc optional func fabMenuDidOpen(fabMenu: LyraMaterial.FABMenu)
+  @objc optional func fabMenuShouldClose(fabMenu: LyraMaterial.FABMenu) -> Swift.Bool
+  @objc optional func fabMenuWillClose(fabMenu: LyraMaterial.FABMenu)
+  @objc optional func fabMenuDidClose(fabMenu: LyraMaterial.FABMenu)
+  @objc optional func fabMenu(fabMenu: LyraMaterial.FABMenu, tappedAt point: CoreFoundation.CGPoint, isOutside: Swift.Bool)
+}
+@_inheritsConvenienceInitializers @objc(FABMenu) @_Concurrency.MainActor(unsafe) open class FABMenu : LyraMaterial.View {
+  @_Concurrency.MainActor(unsafe) open var fabMenuDirection: LyraMaterial.FABMenuDirection {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var fabButton: LyraMaterial.FABButton? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var handleFABButtonCallback: ((UIKit.UIButton) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var fabMenuItemSize: CoreFoundation.CGSize {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var interimSpace: LyraMaterial.InterimSpace {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var isOpened: Swift.Bool {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var isEnabled: Swift.Bool {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.FABMenuDelegate)?
+  @_Concurrency.MainActor(unsafe) open var fabMenuItems: [LyraMaterial.FABMenuItem] {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension LyraMaterial.FABMenu {
+  @_Concurrency.MainActor(unsafe) open func open(duration: Foundation.TimeInterval = 0.15, delay: Foundation.TimeInterval = 0, usingSpringWithDamping: CoreFoundation.CGFloat = 0.5, initialSpringVelocity: CoreFoundation.CGFloat = 0, options: UIKit.UIView.AnimationOptions = [], animations: ((UIKit.UIView) -> Swift.Void)? = nil, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func open(isTriggeredByUserInteraction: Swift.Bool, duration: Foundation.TimeInterval = 0.15, delay: Foundation.TimeInterval = 0, usingSpringWithDamping: CoreFoundation.CGFloat = 0.5, initialSpringVelocity: CoreFoundation.CGFloat = 0, options: UIKit.UIView.AnimationOptions = [], animations: ((UIKit.UIView) -> Swift.Void)? = nil, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func close(duration: Foundation.TimeInterval = 0.15, delay: Foundation.TimeInterval = 0, usingSpringWithDamping: CoreFoundation.CGFloat = 0.5, initialSpringVelocity: CoreFoundation.CGFloat = 0, options: UIKit.UIView.AnimationOptions = [], animations: ((UIKit.UIView) -> Swift.Void)? = nil, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func close(isTriggeredByUserInteraction: Swift.Bool, duration: Foundation.TimeInterval = 0.15, delay: Foundation.TimeInterval = 0, usingSpringWithDamping: CoreFoundation.CGFloat = 0.5, initialSpringVelocity: CoreFoundation.CGFloat = 0, options: UIKit.UIView.AnimationOptions = [], animations: ((UIKit.UIView) -> Swift.Void)? = nil, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+}
+extension LyraMaterial.FABMenu {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
+extension QuartzCore.CALayer {
+  @objc @IBInspectable dynamic open var x: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable dynamic open var y: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable dynamic open var width: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable dynamic open var height: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  open var heightPreset: LyraMaterial.HeightPreset {
+    get
+    set(value)
+  }
+  open var shapePreset: LyraMaterial.ShapePreset {
+    get
+    set(value)
+  }
+  open var depthPreset: LyraMaterial.DepthPreset {
+    get
+    set(value)
+  }
+  open var depth: LyraMaterial.Depth {
+    get
+    set(value)
+  }
+  @objc @IBInspectable dynamic open var isShadowPathAutoSizing: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  open var cornerRadiusPreset: LyraMaterial.CornerRadiusPreset {
+    get
+    set(value)
+  }
+  open var borderWidthPreset: LyraMaterial.BorderWidthPreset {
+    get
+    set(value)
+  }
+}
+extension QuartzCore.CALayer {
+  open func layoutShape()
+  open func layoutShadowPath()
+}
+extension Swift.String {
+  public var trimmed: Swift.String {
+    get
+  }
+  public var lines: [Swift.String] {
+    get
+  }
+  public var firstLine: Swift.String? {
+    get
+  }
+  public var lastLine: Swift.String? {
+    get
+  }
+  public func replaceNewLineCharater(separator: Swift.String = " ") -> Swift.String
+  public func replacePunctuationCharacters(separator: Swift.String = "") -> Swift.String
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BaseButtonGroup<T> : LyraMaterial.View where T : LyraMaterial.Button {
+  @_Concurrency.MainActor(unsafe) open var buttons: [T] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(buttons: [T])
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func didTap(button: T, at index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Card : LyraMaterial.PulseView {
+  @_Concurrency.MainActor(unsafe) final public let container: UIKit.UIView
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var cornerRadiusPreset: LyraMaterial.CornerRadiusPreset {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shapePreset: LyraMaterial.ShapePreset {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var toolbar: LyraMaterial.Toolbar? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var toolbarEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var toolbarEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var contentViewEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentViewEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var bottomBar: LyraMaterial.Bar? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var bottomBarEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var bottomBarEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) convenience public init?(toolbar: LyraMaterial.Toolbar?, contentView: UIKit.UIView?, bottomBar: LyraMaterial.Bar?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func reload()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func prepare(view: UIKit.UIView, with insets: LyraMaterial.EdgeInsets, from top: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  @objc deinit
+}
+extension UIKit.UIFont {
+  open func stringSize(string: Swift.String, constrainedTo width: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
+}
+@objc(ImageFormat) public enum ImageFormat : Swift.Int {
+  case png
+  case jpeg
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIImage {
+  open var width: CoreFoundation.CGFloat {
+    get
+  }
+  open var height: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension UIKit.UIImage {
+  open func resize(toWidth w: CoreFoundation.CGFloat) -> UIKit.UIImage?
+  open func resize(toHeight h: CoreFoundation.CGFloat) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  open func tint(with color: UIKit.UIColor) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  open class func image(with color: UIKit.UIColor, size: CoreFoundation.CGSize) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  open func crop(toWidth tw: CoreFoundation.CGFloat, toHeight th: CoreFoundation.CGFloat) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  open class func clear(size: CoreFoundation.CGSize = CGSize(width: 16, height: 16)) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  open class func contentsOfURL(url: Foundation.URL, completion: @escaping ((UIKit.UIImage?, (any Swift.Error)?) -> Swift.Void))
+}
+extension UIKit.UIImage {
+  open func adjustOrientation() -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  open func blur(radius: CoreFoundation.CGFloat = 0, tintColor: UIKit.UIColor? = nil, saturationDeltaFactor: CoreFoundation.CGFloat = 0) -> UIKit.UIImage?
+}
+extension Swift.Array where Element : Swift.Equatable {
+  public func slice(start: Swift.Int, end: Swift.Int?) -> [Element]
+}
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) open func capture() -> UIKit.UIImage?
+}
+@objc(ChipBarAlignment) public enum ChipBarAlignment : Swift.Int {
+  case top
+  case bottom
+  case hidden
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var chipBarController: LyraMaterial.ChipBarController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ChipBarController : LyraMaterial.TransitionController {
+  @_Concurrency.MainActor(unsafe) open var displayStyle: LyraMaterial.DisplayStyle {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let chipBar: LyraMaterial.ChipBar
+  @_Concurrency.MainActor(unsafe) open var chipBarAlignment: LyraMaterial.ChipBarAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) override public init(rootViewController: UIKit.UIViewController)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PulseView : LyraMaterial.View, LyraMaterial.Pulseable {
+  @_Concurrency.MainActor(unsafe) open var pulseAnimation: LyraMaterial.PulseAnimation {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseColor: UIKit.UIColor {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseOpacity: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open func pulse(point: CoreFoundation.CGPoint? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BaseIconLayerButton : LyraMaterial.Button {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open func setIconColor(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
+  @_Concurrency.MainActor(unsafe) open func iconColor(for state: UIKit.UIControl.State) -> UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) open var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open func setSelected(_ isSelected: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open var iconSize: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var iconEdgeInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) open var selectedPulseColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) open var normalPulseColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+extension LyraMotion.MotionAnimation {
+  public static func shadow(offset: LyraMaterial.Offset) -> LyraMotion.MotionAnimation
+  public static func depth(_ preset: LyraMaterial.DepthPreset) -> LyraMotion.MotionAnimation
+  public static func depth(_ depth: LyraMaterial.Depth) -> LyraMotion.MotionAnimation
+}
+@objc(PulseAnimation) public enum PulseAnimation : Swift.Int {
+  case none
+  case center
+  case centerWithBacking
+  case centerRadialBeyondBounds
+  case radialBeyondBounds
+  case backing
+  case point
+  case pointWithBacking
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol Pulseable {
+  var pulseAnimation: LyraMaterial.PulseAnimation { get set }
+  var pulseColor: UIKit.UIColor { get set }
+  var pulseOpacity: CoreFoundation.CGFloat { get set }
+}
+public struct Pulse {
+  public var animation: LyraMaterial.PulseAnimation
+  public var color: UIKit.UIColor
+  public var opacity: CoreFoundation.CGFloat
+  public init(pulseView: UIKit.UIView?, pulseLayer: QuartzCore.CALayer?)
+  public mutating func expand(point: CoreFoundation.CGPoint)
+  public mutating func contract()
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class RadioButtonGroup : LyraMaterial.BaseButtonGroup<LyraMaterial.RadioButton> {
+  @_Concurrency.MainActor(unsafe) convenience public init(titles: [Swift.String])
+  @_Concurrency.MainActor(unsafe) open var selectedButton: LyraMaterial.RadioButton? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var selectedIndex: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) override open func didTap(button: LyraMaterial.RadioButton, at index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+public protocol Themeable : AnyObject {
+  func apply(theme: LyraMaterial.Theme)
+  var isThemingEnabled: Swift.Bool { get set }
+}
+public struct Theme : Swift.Hashable {
+  public var primary: UIKit.UIColor
+  public var secondary: UIKit.UIColor
+  public var background: UIKit.UIColor
+  public var surface: UIKit.UIColor
+  public var error: UIKit.UIColor
+  public var onPrimary: UIKit.UIColor
+  public var onSecondary: UIKit.UIColor
+  public var onBackground: UIKit.UIColor
+  public var onSurface: UIKit.UIColor
+  public var onError: UIKit.UIColor
+  public static var isEnabled: Swift.Bool
+  public static var font: any LyraMaterial.FontType.Type
+  public init()
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: LyraMaterial.Theme, b: LyraMaterial.Theme) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension LyraMaterial.Theme {
+  public static var current: LyraMaterial.Theme {
+    get
+  }
+  public static var light: LyraMaterial.Theme
+  public static var dark: LyraMaterial.Theme
+}
+extension LyraMaterial.Theme {
+  public static func apply(theme: LyraMaterial.Theme)
+  public static func apply(theme: LyraMaterial.Theme, to view: UIKit.UIView)
+  public static func apply(theme: LyraMaterial.Theme, to viewController: UIKit.UIViewController)
+  public static func applying(theme: LyraMaterial.Theme, for execute: () -> Swift.Void)
+}
+extension LyraMaterial.Themeable where Self : ObjectiveC.NSObject {
+  public static var isThemingEnabled: Swift.Bool {
+    get
+    set(value)
+  }
+  public var isThemingEnabled: Swift.Bool {
+    get
+    set(value)
+  }
+}
+@objc(ToolbarAlignment) public enum ToolbarAlignment : Swift.Int {
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var toolbarController: LyraMaterial.ToolbarController? {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(ToolbarController) @_Concurrency.MainActor(unsafe) open class ToolbarController : LyraMaterial.StatusBarController {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let toolbar: LyraMaterial.Toolbar
+  @_Concurrency.MainActor(unsafe) open var toolbarAlignment: LyraMaterial.ToolbarAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) override public init(rootViewController: UIKit.UIViewController)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class DialogController<T> : UIKit.UIViewController where T : LyraMaterial.DialogView {
+  @_Concurrency.MainActor(unsafe) final public let dialogView: T
+  @_Concurrency.MainActor(unsafe) open var isCancelable: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var didCancelHandler: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var shouldDismissHandler: ((T, LyraMaterial.Button?) -> Swift.Bool)?
+  @_Concurrency.MainActor(unsafe) open var didTapPositiveButtonHandler: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var didTapNegativeButtonHandler: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var didTapNeutralButtonHandler: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var willAppear: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var didDisappear: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func dismiss(isAnimated: Swift.Bool = true)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class DialogView : LyraMaterial.View, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) final public let titleArea: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) final public let buttonArea: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) final public let contentArea: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) final public let scrollView: UIKit.UIScrollView
+  @_Concurrency.MainActor(unsafe) final public let titleLabel: UIKit.UILabel
+  @_Concurrency.MainActor(unsafe) final public let detailsLabel: UIKit.UILabel
+  @_Concurrency.MainActor(unsafe) final public let neutralButton: LyraMaterial.FlatButton
+  @_Concurrency.MainActor(unsafe) final public let positiveButton: LyraMaterial.FlatButton
+  @_Concurrency.MainActor(unsafe) final public let negativeButton: LyraMaterial.FlatButton
+  @_Concurrency.MainActor(unsafe) open var maxSize: CoreFoundation.CGSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func titleAreaSizeThatFits(width: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) open func buttonAreaSizeThatFits(width: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) open func contentAreaSizeThatFits(width: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TableView : UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, style: UIKit.UITableView.Style)
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ImageCard : LyraMaterial.Card {
+  @_Concurrency.MainActor(unsafe) open var displayStyle: LyraMaterial.DisplayStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var imageViewEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var imageViewEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var imageView: UIKit.UIImageView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var toolbarAlignment: LyraMaterial.ToolbarAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func reload()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+public protocol TableViewDelegate : UIKit.UITableViewDelegate {
+}
+public protocol TableViewDataSource : UIKit.UITableViewDataSource {
+  var dataSourceItems: [LyraMaterial.DataSourceItem] { get }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var tableViewController: LyraMaterial.TableViewController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TableViewController : LyraMaterial.ViewController {
+  @_Concurrency.MainActor(unsafe) final public let tableView: LyraMaterial.TableView
+  @_Concurrency.MainActor(unsafe) open var dataSourceItems: [LyraMaterial.DataSourceItem]
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LyraMaterial.TableViewController : LyraMaterial.TableViewDelegate {
+}
+extension LyraMaterial.TableViewController : LyraMaterial.TableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+@objc public protocol DialogDelegate {
+  @objc optional func dialogDidCancel(_ dialog: LyraMaterial.Dialog)
+  @objc optional func dialogWillAppear(_ dialog: LyraMaterial.Dialog)
+  @objc optional func dialogDidDisappear(_ dialog: LyraMaterial.Dialog)
+  @objc optional func dialog(_ dialog: LyraMaterial.Dialog, shouldDismiss button: LyraMaterial.Button?) -> Swift.Bool
+  @objc optional func dialog(_ dialog: LyraMaterial.Dialog, didTapPositive button: LyraMaterial.Button)
+  @objc optional func dialog(_ dialog: LyraMaterial.Dialog, didTapNegative button: LyraMaterial.Button)
+  @objc optional func dialog(_ dialog: LyraMaterial.Dialog, didTapNeutral button: LyraMaterial.Button)
+}
+@objc @_inheritsConvenienceInitializers open class Dialog : ObjectiveC.NSObject {
+  final public let controller: LyraMaterial.DialogController<LyraMaterial.DialogView>
+  weak open var delegate: (any LyraMaterial.DialogDelegate)?
+  @objc override dynamic public init()
+  @discardableResult
+  open func title(_ text: Swift.String?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func details(_ text: Swift.String?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func positive(_ title: Swift.String?, handler: (() -> Swift.Void)?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func negative(_ title: Swift.String?, handler: (() -> Swift.Void)?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func neutral(_ title: Swift.String?, handler: (() -> Swift.Void)?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func isCancelable(_ value: Swift.Bool, handler: (() -> Swift.Void)? = nil) -> LyraMaterial.Dialog
+  @discardableResult
+  open func shouldDismiss(handler: ((LyraMaterial.DialogView, LyraMaterial.Button?) -> Swift.Bool)?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func willAppear(handler: (() -> Swift.Void)?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func didDisappear(handler: (() -> Swift.Void)?) -> LyraMaterial.Dialog
+  @discardableResult
+  open func delegate(_ delegate: any LyraMaterial.DialogDelegate) -> LyraMaterial.Dialog
+  @discardableResult
+  open func show(_ viewController: UIKit.UIViewController) -> LyraMaterial.Dialog
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PresenterCard : LyraMaterial.Card {
+  @_Concurrency.MainActor(unsafe) open var presenterViewEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var presenterViewEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var presenterView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) override open func reload()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc(TabBarAlignment) public enum TabBarAlignment : Swift.Int {
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TabBarThemingStyle {
+  case auto
+  case primary
+  case secondary
+  public static func == (a: LyraMaterial.TabBarThemingStyle, b: LyraMaterial.TabBarThemingStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var tabItem: LyraMaterial.TabItem {
+    @objc get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var tabsController: LyraMaterial.TabsController? {
+    get
+  }
+}
+@objc(TabsControllerDelegate) public protocol TabsControllerDelegate {
+  @objc optional func tabsController(tabsController: LyraMaterial.TabsController, shouldSelect viewController: UIKit.UIViewController) -> Swift.Bool
+  @objc optional func tabsController(tabsController: LyraMaterial.TabsController, willSelect viewController: UIKit.UIViewController)
+  @objc optional func tabsController(tabsController: LyraMaterial.TabsController, didSelect viewController: UIKit.UIViewController)
+  @objc optional func tabsController(tabsController: LyraMaterial.TabsController, willCancelSelecting viewController: UIKit.UIViewController)
+  @objc optional func tabsController(tabsController: LyraMaterial.TabsController, didCancelSelecting viewController: UIKit.UIViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class TabsController : LyraMaterial.TransitionController {
+  @_Concurrency.MainActor(unsafe) open var displayStyle: LyraMaterial.DisplayStyle {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let tabBar: LyraMaterial.TabBar
+  @_Concurrency.MainActor(unsafe) open var isSwipeEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.TabsControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) open var viewControllers: [UIKit.UIViewController] {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedIndex: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var tabBarAlignment: LyraMaterial.TabBarAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var tabBarThemingStyle: LyraMaterial.TabBarThemingStyle
+  @_Concurrency.MainActor(unsafe) public var interactiveSwipeGesture: UIKit.UIPanGestureRecognizer? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(viewControllers: [UIKit.UIViewController], selectedIndex: Swift.Int = 0)
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func transition(to viewController: UIKit.UIViewController, completion: ((Swift.Bool) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @objc deinit
+}
+extension LyraMaterial.TabsController {
+  @_Concurrency.MainActor(unsafe) open func select(at index: Swift.Int)
+}
+@objc(ChipItemStyle) public enum ChipItemStyle : Swift.Int {
+  case pill
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ChipItem : LyraMaterial.FlatButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@objc(ChipBarDelegate) public protocol ChipBarDelegate {
+  @objc optional func chipBar(chipBar: LyraMaterial.ChipBar, willSelect chipItem: LyraMaterial.ChipItem)
+  @objc optional func chipBar(chipBar: LyraMaterial.ChipBar, didSelect chipItem: LyraMaterial.ChipItem)
+}
+@objc(ChipBarStyle) public enum ChipBarStyle : Swift.Int {
+  case auto
+  case nonScrollable
+  case scrollable
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ChipBar : LyraMaterial.Bar {
+  @_Concurrency.MainActor(unsafe) open var chipBarStyle: LyraMaterial.ChipBarStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public let scrollView: UIKit.UIScrollView
+  @_Concurrency.MainActor(unsafe) open var isScrollBounceEnabled: Swift.Bool {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.ChipBarDelegate)?
+  @_Concurrency.MainActor(unsafe) open var selectedChipItem: LyraMaterial.ChipItem? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var chipItemsContentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var chipItemsContentEdgeInsets: LyraMaterial.EdgeInsets {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var chipItemsInterimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var chipItemsInterimSpace: LyraMaterial.InterimSpace {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var chipItems: [LyraMaterial.ChipItem] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension LyraMaterial.ChipBar {
+  @_Concurrency.MainActor(unsafe) open func select(at index: Swift.Int, completion: ((LyraMaterial.ChipItem) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func animate(to chipItem: LyraMaterial.ChipItem, completion: ((LyraMaterial.ChipItem) -> Swift.Void)? = nil)
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var cardCollectionViewController: LyraMaterial.CardCollectionViewController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CardCollectionViewController : LyraMaterial.ViewController {
+  @_Concurrency.MainActor(unsafe) final public let collectionView: LyraMaterial.CollectionView
+  @_Concurrency.MainActor(unsafe) open var dataSourceItems: [LyraMaterial.DataSourceItem]
+  @_Concurrency.MainActor(unsafe) open var dataSourceItemsIndexPaths: [Foundation.IndexPath : Any]
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LyraMaterial.CardCollectionViewController : LyraMaterial.CollectionViewDelegate {
+}
+extension LyraMaterial.CardCollectionViewController : LyraMaterial.CollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+@objc(ContentViewAlignment) public enum ContentViewAlignment : Swift.Int {
+  case full
+  case center
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Bar : LyraMaterial.View {
+  @_Concurrency.MainActor(unsafe) open var willLayout: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) open var contentViewAlignment: LyraMaterial.ContentViewAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentEdgeInsets: LyraMaterial.EdgeInsets {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var interimSpace: LyraMaterial.InterimSpace {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var gridFactor: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public let contentView: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) open var leftViews: [UIKit.UIView] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightViews: [UIKit.UIView] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var centerViews: [UIKit.UIView] {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) convenience public init(leftViews: [UIKit.UIView]? = nil, rightViews: [UIKit.UIView]? = nil, centerViews: [UIKit.UIView]? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Button : UIKit.UIButton, LyraMaterial.Pulseable, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) final public let visualLayer: QuartzCore.CAShapeLayer
+  @_Concurrency.MainActor(unsafe) open var pulseAnimation: LyraMaterial.PulseAnimation {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseColor: UIKit.UIColor {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var pulseOpacity: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var title: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var titleColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedTitleColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func pulse(point: CoreFoundation.CGPoint? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func bringImageViewToFront()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FABButton : LyraMaterial.Button {
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FlatButton : LyraMaterial.Button {
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ViewController : UIKit.UIViewController, LyraMaterial.Themeable {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class RaisedButton : LyraMaterial.Button {
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+open class ErrorTextFieldValidator {
+  public typealias ValidationClosure = (_ text: Swift.String) -> Swift.Bool
+  open var closures: [(code: LyraMaterial.ErrorTextFieldValidator.ValidationClosure, message: Swift.String)]
+  weak open var textField: LyraMaterial.ErrorTextField?
+  open var autoValidationType: LyraMaterial.ErrorTextFieldValidator.AutoValidationType
+  open var isErrorShownOnce: Swift.Bool
+  public init(textField: LyraMaterial.ErrorTextField)
+  open func prepare()
+  @discardableResult
+  open func isValid(isDeferred: Swift.Bool) -> Swift.Bool
+  @discardableResult
+  open func validate(message: Swift.String, when code: @escaping LyraMaterial.ErrorTextFieldValidator.ValidationClosure) -> Self
+  public enum AutoValidationType {
+    case none
+    case `default`
+    case always
+    case custom((LyraMaterial.ErrorTextField) -> Swift.Void)
+  }
+  @objc deinit
+}
+extension LyraMaterial.ErrorTextField {
+  @_Concurrency.MainActor(unsafe) open var validator: LyraMaterial.ErrorTextFieldValidator {
+    get
+    set(value)
+  }
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) open func isValid(isDeferred: Swift.Bool = false) -> Swift.Bool
+}
+extension LyraMaterial.ErrorTextFieldValidator {
+  @discardableResult
+  public func email(message: Swift.String) -> Self
+  @discardableResult
+  public func username(message: Swift.String) -> Self
+  @discardableResult
+  public func regex(message: Swift.String, pattern: Swift.String) -> Self
+  @discardableResult
+  public func min(length: Swift.Int, message: Swift.String, trimmingSet: Foundation.CharacterSet? = .whitespacesAndNewlines) -> Self
+  @discardableResult
+  public func max(length: Swift.Int, message: Swift.String, trimmingSet: Foundation.CharacterSet? = .whitespacesAndNewlines) -> Self
+  @discardableResult
+  public func notEmpty(message: Swift.String, trimmingSet: Foundation.CharacterSet? = .whitespacesAndNewlines) -> Self
+  @discardableResult
+  public func noWhitespaces(message: Swift.String) -> Self
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var fontSize: CoreFoundation.CGFloat {
+    get
+    set(value)
+  }
+}
+public enum IconButtonThemingStyle {
+  case onBackground
+  case onPrimary
+  public static func == (a: LyraMaterial.IconButtonThemingStyle, b: LyraMaterial.IconButtonThemingStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class IconButton : LyraMaterial.Button {
+  @_Concurrency.MainActor(unsafe) open var themingStyle: LyraMaterial.IconButtonThemingStyle
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func apply(theme: LyraMaterial.Theme)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) override public init(image: UIKit.UIImage?, tintColor: UIKit.UIColor? = nil)
+  @_Concurrency.MainActor(unsafe) override public init(title: Swift.String?, titleColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@objc(ColorPalette) public protocol ColorPalette {
+  @objc static var lighten5: UIKit.UIColor { get }
+  @objc static var lighten4: UIKit.UIColor { get }
+  @objc static var lighten3: UIKit.UIColor { get }
+  @objc static var lighten2: UIKit.UIColor { get }
+  @objc static var lighten1: UIKit.UIColor { get }
+  @objc static var base: UIKit.UIColor { get }
+  @objc static var darken1: UIKit.UIColor { get }
+  @objc static var darken2: UIKit.UIColor { get }
+  @objc static var darken3: UIKit.UIColor { get }
+  @objc static var darken4: UIKit.UIColor { get }
+  @objc optional static var accent1: UIKit.UIColor { get }
+  @objc optional static var accent2: UIKit.UIColor { get }
+  @objc optional static var accent3: UIKit.UIColor { get }
+  @objc optional static var accent4: UIKit.UIColor { get }
+}
+@objc @_inheritsConvenienceInitializers open class Color : UIKit.UIColor {
+  @_hasMissingDesignatedInitializers open class darkText {
+    public static let primary: UIKit.UIColor
+    public static let secondary: UIKit.UIColor
+    public static let others: UIKit.UIColor
+    public static let dividers: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class lightText {
+    public static let primary: UIKit.UIColor
+    public static let secondary: UIKit.UIColor
+    public static let others: UIKit.UIColor
+    public static let dividers: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class red : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class pink : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class purple : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class deepPurple : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class indigo : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class blue : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class lightBlue : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class cyan : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class teal : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class green : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class lightGreen : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class lime : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class yellow : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class amber : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class orange : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class deepOrange : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc public static let accent1: UIKit.UIColor
+    @objc public static let accent2: UIKit.UIColor
+    @objc public static let accent3: UIKit.UIColor
+    @objc public static let accent4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class brown : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class grey : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class blueGrey : LyraMaterial.ColorPalette {
+    @objc public static let lighten5: UIKit.UIColor
+    @objc public static let lighten4: UIKit.UIColor
+    @objc public static let lighten3: UIKit.UIColor
+    @objc public static let lighten2: UIKit.UIColor
+    @objc public static let lighten1: UIKit.UIColor
+    @objc public static let base: UIKit.UIColor
+    @objc public static let darken1: UIKit.UIColor
+    @objc public static let darken2: UIKit.UIColor
+    @objc public static let darken3: UIKit.UIColor
+    @objc public static let darken4: UIKit.UIColor
+    @objc deinit
+  }
+  @objc override dynamic public init(white: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat)
+  @objc override dynamic public init(hue: CoreFoundation.CGFloat, saturation: CoreFoundation.CGFloat, brightness: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat)
+  @objc override dynamic public init(red: CoreFoundation.CGFloat, green: CoreFoundation.CGFloat, blue: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat)
+  @available(iOS 10.0, *)
+  @objc override dynamic public init(displayP3Red: CoreFoundation.CGFloat, green: CoreFoundation.CGFloat, blue: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat)
+  @objc override dynamic public init(cgColor: CoreGraphics.CGColor)
+  @objc override dynamic public init(patternImage image: UIKit.UIImage)
+  @available(iOS 5.0, *)
+  @objc override dynamic public init(ciColor: CoreImage.CIColor)
+  @objc override dynamic public init()
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @available(iOS 13.0, *)
+  @objc override dynamic public init(dynamicProvider: @escaping (UIKit.UITraitCollection) -> UIKit.UIColor)
+  @objc deinit
+}
+@objc(SpringDirection) public enum SpringDirection : Swift.Int {
+  case up
+  case down
+  case left
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers open class SpringAnimation {
+  open var springDirection: LyraMaterial.SpringDirection
+  open var isOpened: Swift.Bool
+  open var isEnabled: Swift.Bool
+  open var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set
+  }
+  open var interimSpace: LyraMaterial.InterimSpace {
+    get
+    set
+  }
+  open var views: [UIKit.UIView] {
+    get
+    set
+  }
+  open var baseSize: CoreFoundation.CGSize {
+    get
+    set
+  }
+  open var itemSize: CoreFoundation.CGSize {
+    get
+    set
+  }
+  open func reload()
+  @objc deinit
+}
+extension LyraMaterial.SpringAnimation {
+  open func expand(duration: Foundation.TimeInterval = 0.15, delay: Foundation.TimeInterval = 0, usingSpringWithDamping: CoreFoundation.CGFloat = 0.5, initialSpringVelocity: CoreFoundation.CGFloat = 0, options: UIKit.UIView.AnimationOptions = [], animations: ((UIKit.UIView) -> Swift.Void)? = nil, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+  open func contract(duration: Foundation.TimeInterval = 0.15, delay: Foundation.TimeInterval = 0, usingSpringWithDamping: CoreFoundation.CGFloat = 0.5, initialSpringVelocity: CoreFoundation.CGFloat = 0, options: UIKit.UIView.AnimationOptions = [], animations: ((UIKit.UIView) -> Swift.Void)? = nil, completion: ((UIKit.UIView) -> Swift.Void)? = nil)
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public var fontSize: CoreFoundation.CGFloat {
+    get
+    set(value)
+  }
+}
+public protocol LayoutAnchorable {
+}
+extension UIKit.UIView : LyraMaterial.LayoutAnchorable {
+}
+extension LyraMaterial.Layout : LyraMaterial.LayoutAnchorable {
+}
+extension LyraMaterial.LayoutAnchor : LyraMaterial.LayoutAnchorable {
+}
+public struct LayoutAnchor {
+  weak public var constraintable: (any LyraMaterial.Constraintable)?
+  public let attributes: [LyraMaterial.LayoutAttribute]
+  public init(constraintable: (any LyraMaterial.Constraintable)?, attributes: [LyraMaterial.LayoutAttribute] = [])
+}
+extension LyraMaterial.LayoutAnchor {
+  public var top: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var bottom: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var left: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var right: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var leading: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var trailing: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var topLeft: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var topRight: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var bottomLeft: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var bottomRight: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var topLeading: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var topTrailing: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var bottomLeading: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var bottomTrailing: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var topBottom: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var leftRight: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var leadingTrailing: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var center: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var centerX: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var centerY: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var edges: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var width: LyraMaterial.LayoutAnchor {
+    get
+  }
+  public var height: LyraMaterial.LayoutAnchor {
+    get
+  }
+}
+@objc(DeviceModel) public enum DeviceModel : Swift.Int {
+  case iPodTouch5
+  case iPodTouch6
+  case iPhone4
+  case iPhone4s
+  case iPhone5
+  case iPhone5c
+  case iPhone5s
+  case iPhone6
+  case iPhone6Plus
+  case iPhone6s
+  case iPhone6sPlus
+  case iPhone7
+  case iPhone7Plus
+  case iPhone8
+  case iPhone8Plus
+  case iPhoneX
+  case iPhoneXS
+  case iPhoneXSMax
+  case iPhoneXR
+  case iPhoneSE
+  case iPad2
+  case iPad3
+  case iPad4
+  case iPadAir
+  case iPadAir2
+  case iPadMini
+  case iPadMini2
+  case iPadMini3
+  case iPadMini4
+  case iPadPro
+  case iPadProLarge
+  case iPad5
+  case iPadPro2
+  case iPadProLarge2
+  case iPad6
+  case iPadPro3
+  case iPadProLarge3
+  case appleTv
+  case appleTv4k
+  case homePod
+  case simulator
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct Device {
+  public static var identifier: Swift.String {
+    get
+  }
+  public static var model: LyraMaterial.DeviceModel {
+    get
+  }
+  public static var userInterfaceIdiom: UIKit.UIUserInterfaceIdiom {
+    get
+  }
+}
+public func == (lhs: LyraMaterial.DeviceModel, rhs: LyraMaterial.DeviceModel) -> Swift.Bool
+public func != (lhs: LyraMaterial.DeviceModel, rhs: LyraMaterial.DeviceModel) -> Swift.Bool
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Toolbar : LyraMaterial.Bar, LyraMaterial.Themeable {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var title: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let titleLabel: UIKit.UILabel
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var detail: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let detailLabel: UIKit.UILabel
+  @_Concurrency.MainActor(unsafe) override open var leftViews: [UIKit.UIView] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open var centerViews: [UIKit.UIView] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open var rightViews: [UIKit.UIView] {
+    get
+    set
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) open func apply(theme: LyraMaterial.Theme)
+}
+@objc(DividerAlignment) public enum DividerAlignment : Swift.Int {
+  case top
+  case left
+  case bottom
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct Divider {
+  public var thickness: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  public var contentEdgeInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  public var color: UIKit.UIColor? {
+    get
+    set(value)
+  }
+  public var alignment: LyraMaterial.DividerAlignment {
+    get
+    set
+  }
+  public func reload()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var divider: LyraMaterial.Divider {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var dividerContentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var dividerContentEdgeInsets: LyraMaterial.EdgeInsets {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var dividerColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var isDividerHidden: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var dividerAlignment: LyraMaterial.DividerAlignment {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var dividerThickness: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open func layoutDivider()
+}
+@objc(GridAxisDirection) public enum GridAxisDirection : Swift.Int {
+  case any
+  case horizontal
+  case vertical
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct GridAxis {
+  public var direction: LyraMaterial.GridAxisDirection
+  public var rows: Swift.Int
+  public var columns: Swift.Int
+}
+public struct GridOffset {
+  public var rows: Swift.Int
+  public var columns: Swift.Int
+}
+public struct Grid {
+  public var isDeferred: Swift.Bool
+  public var rows: Swift.Int {
+    get
+    set
+  }
+  public var columns: Swift.Int {
+    get
+    set
+  }
+  public var offset: LyraMaterial.GridOffset {
+    get
+    set
+  }
+  public var axis: LyraMaterial.GridAxis {
+    get
+    set
+  }
+  public var layoutEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  public var layoutEdgeInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  public var contentEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set
+  }
+  public var contentEdgeInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  public var interimSpacePreset: LyraMaterial.InterimSpacePreset {
+    get
+    set
+  }
+  public var interimSpace: LyraMaterial.InterimSpace {
+    get
+    set
+  }
+  public var views: [UIKit.UIView] {
+    get
+    set
+  }
+  public mutating func begin()
+  public mutating func commit()
+  public mutating func update(_ block: (LyraMaterial.Grid) -> Swift.Void)
+  public func reload()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var grid: LyraMaterial.Grid {
+    get
+    set(value)
+  }
+  @_Concurrency.MainActor(unsafe) open var layoutEdgeInsetsPreset: LyraMaterial.EdgeInsetsPreset {
+    get
+    set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var layoutEdgeInsets: LyraMaterial.EdgeInsets {
+    @objc get
+    @objc set(value)
+  }
+}
+public enum HeightPreset {
+  case none
+  case tiny
+  case xsmall
+  case small
+  case `default`
+  case normal
+  case medium
+  case large
+  case xlarge
+  case xxlarge
+  case custom(CoreFoundation.CGFloat)
+  public var rawValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+public struct Application {
+  public static var shared: UIKit.UIApplication {
+    get
+  }
+  public static var keyWindow: UIKit.UIWindow? {
+    get
+  }
+  public static var rootViewController: UIKit.UIViewController? {
+    get
+  }
+  public static var isLandscape: Swift.Bool {
+    get
+  }
+  public static var isPortrait: Swift.Bool {
+    get
+  }
+  public static var orientation: UIKit.UIInterfaceOrientation {
+    get
+  }
+  public static var statusBarStyle: UIKit.UIStatusBarStyle {
+    get
+    set(value)
+  }
+  public static var isStatusBarHidden: Swift.Bool {
+    get
+    set(value)
+  }
+  public static var shouldStatusBarBeHidden: Swift.Bool {
+    get
+  }
+  public static var userInterfaceLayoutDirection: UIKit.UIUserInterfaceLayoutDirection {
+    get
+  }
+}
+public struct Icon {
+  public static var bundle: Foundation.Bundle {
+    get
+  }
+  public static func icon(_ name: Swift.String) -> UIKit.UIImage?
+  public static var add: UIKit.UIImage?
+  public static var addCircle: UIKit.UIImage?
+  public static var addCircleOutline: UIKit.UIImage?
+  public static var arrowBack: UIKit.UIImage?
+  public static var arrowDownward: UIKit.UIImage?
+  public static var audio: UIKit.UIImage?
+  public static var bell: UIKit.UIImage?
+  public static var cameraFront: UIKit.UIImage?
+  public static var cameraRear: UIKit.UIImage?
+  public static var check: UIKit.UIImage?
+  public static var clear: UIKit.UIImage?
+  public static var close: UIKit.UIImage?
+  public static var edit: UIKit.UIImage?
+  public static var email: UIKit.UIImage?
+  public static var favorite: UIKit.UIImage?
+  public static var favoriteBorder: UIKit.UIImage?
+  public static var flashAuto: UIKit.UIImage?
+  public static var flashOff: UIKit.UIImage?
+  public static var flashOn: UIKit.UIImage?
+  public static var history: UIKit.UIImage?
+  public static var home: UIKit.UIImage?
+  public static var image: UIKit.UIImage?
+  public static var menu: UIKit.UIImage?
+  public static var moreHorizontal: UIKit.UIImage?
+  public static var moreVertical: UIKit.UIImage?
+  public static var movie: UIKit.UIImage?
+  public static var pen: UIKit.UIImage?
+  public static var place: UIKit.UIImage?
+  public static var phone: UIKit.UIImage?
+  public static var photoCamera: UIKit.UIImage?
+  public static var photoLibrary: UIKit.UIImage?
+  public static var search: UIKit.UIImage?
+  public static var settings: UIKit.UIImage?
+  public static var share: UIKit.UIImage?
+  public static var star: UIKit.UIImage?
+  public static var starBorder: UIKit.UIImage?
+  public static var starHalf: UIKit.UIImage?
+  public static var videocam: UIKit.UIImage?
+  public static var visibility: UIKit.UIImage?
+  public static var visibilityOff: UIKit.UIImage?
+  public static var work: UIKit.UIImage?
+  public struct cm {
+    public static var add: UIKit.UIImage?
+    public static var arrowBack: UIKit.UIImage?
+    public static var arrowDownward: UIKit.UIImage?
+    public static var audio: UIKit.UIImage?
+    public static var audioLibrary: UIKit.UIImage?
+    public static var bell: UIKit.UIImage?
+    public static var check: UIKit.UIImage?
+    public static var clear: UIKit.UIImage?
+    public static var close: UIKit.UIImage?
+    public static var edit: UIKit.UIImage?
+    public static var image: UIKit.UIImage?
+    public static var menu: UIKit.UIImage?
+    public static var microphone: UIKit.UIImage?
+    public static var moreHorizontal: UIKit.UIImage?
+    public static var moreVertical: UIKit.UIImage?
+    public static var movie: UIKit.UIImage?
+    public static var pause: UIKit.UIImage?
+    public static var pen: UIKit.UIImage?
+    public static var photoCamera: UIKit.UIImage?
+    public static var photoLibrary: UIKit.UIImage?
+    public static var play: UIKit.UIImage?
+    public static var search: UIKit.UIImage?
+    public static var settings: UIKit.UIImage?
+    public static var share: UIKit.UIImage?
+    public static var shuffle: UIKit.UIImage?
+    public static var skipBackward: UIKit.UIImage?
+    public static var skipForward: UIKit.UIImage?
+    public static var star: UIKit.UIImage?
+    public static var videocam: UIKit.UIImage?
+    public static var volumeHigh: UIKit.UIImage?
+    public static var volumeMedium: UIKit.UIImage?
+    public static var volumeOff: UIKit.UIImage?
+  }
+}
+@objc(SearchBarAlignment) public enum SearchBarAlignment : Swift.Int {
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var searchBarController: LyraMaterial.SearchBarController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SearchBarController : LyraMaterial.StatusBarController {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let searchBar: LyraMaterial.SearchBar
+  @_Concurrency.MainActor(unsafe) open var searchBarAlignment: LyraMaterial.SearchBarAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) override public init(rootViewController: UIKit.UIViewController)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(Layer) open class Layer : QuartzCore.CAShapeLayer {
+  final public let visualLayer: QuartzCore.CAShapeLayer
+  @objc @IBInspectable open var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var contentsRect: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var contentsCenter: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @objc override dynamic open var contentsScale: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @objc override dynamic open var contentsGravity: QuartzCore.CALayerContentsGravity {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @objc override dynamic open var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(layer: Any)
+  @objc override dynamic public init()
+  convenience public init(frame: CoreFoundation.CGRect)
+  @objc override dynamic open func layoutSublayers()
+  @objc deinit
+}
+public protocol Constraintable : AnyObject {
+}
+@available(iOS 9.0, *)
+extension UIKit.UILayoutGuide : LyraMaterial.Constraintable {
+}
+extension UIKit.UIView : LyraMaterial.Constraintable {
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func layout(_ child: UIKit.UIView) -> LyraMaterial.Layout
+  @_Concurrency.MainActor(unsafe) public var layout: LyraMaterial.Layout {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var anchor: LyraMaterial.LayoutAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeAnchor: LyraMaterial.LayoutAnchor {
+    get
+  }
+}
+public struct Layout {
+  weak public var constraintable: (any LyraMaterial.Constraintable)?
+  public var view: UIKit.UIView? {
+    get
+  }
+}
+extension LyraMaterial.Layout {
+  @discardableResult
+  public func multiply(_ multiplier: CoreFoundation.CGFloat) -> LyraMaterial.Layout
+  @discardableResult
+  public func priority(_ value: Swift.Float) -> LyraMaterial.Layout
+  @discardableResult
+  public func priority(_ priority: UIKit.UILayoutPriority) -> LyraMaterial.Layout
+}
+extension LyraMaterial.Layout {
+  @discardableResult
+  public func top(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func left(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func right(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func leading(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func trailing(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottom(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func topLeft(top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topRight(top: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomLeft(bottom: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomRight(bottom: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func leftRight(left: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topLeading(top: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topTrailing(top: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomLeading(bottom: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomTrailing(bottom: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func leadingTrailing(leading: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topBottom(top: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func center(offsetX: CoreFoundation.CGFloat = 0, offsetY: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerX(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerY(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func width(offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func height(offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func edges(top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+}
+extension LyraMaterial.Layout {
+  @discardableResult
+  public func topSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func leftSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func rightSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func leadingSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func trailingSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func topLeftSafe(top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topRightSafe(top: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomLeftSafe(bottom: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomRightSafe(bottom: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func leftRightSafe(left: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topLeadingSafe(top: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topTrailingSafe(top: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomLeadingSafe(bottom: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomTrailingSafe(bottom: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func leadingTrailingSafe(leading: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topBottomSafe(top: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerSafe(offsetX: CoreFoundation.CGFloat = 0, offsetY: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerXSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerYSafe(_ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func widthSafe(offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func heightSafe(offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func edgesSafe(top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+}
+extension LyraMaterial.Layout {
+  @discardableResult
+  public func width(_ width: CoreFoundation.CGFloat, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func height(_ height: CoreFoundation.CGFloat, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func size(_ size: CoreFoundation.CGSize) -> LyraMaterial.Layout
+}
+extension LyraMaterial.Layout {
+  @discardableResult
+  public func top(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func left(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func right(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func leading(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func trailing(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottom(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func topLeading(_ anchor: any LyraMaterial.LayoutAnchorable, top: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topTrailing(_ anchor: any LyraMaterial.LayoutAnchorable, top: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomLeading(_ anchor: any LyraMaterial.LayoutAnchorable, bottom: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomTrailing(_ anchor: any LyraMaterial.LayoutAnchorable, bottom: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func leadingTrailing(_ anchor: any LyraMaterial.LayoutAnchorable, leading: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topLeft(_ anchor: any LyraMaterial.LayoutAnchorable, top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topRight(_ anchor: any LyraMaterial.LayoutAnchorable, top: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomLeft(_ anchor: any LyraMaterial.LayoutAnchorable, bottom: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func bottomRight(_ anchor: any LyraMaterial.LayoutAnchorable, bottom: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func leftRight(_ anchor: any LyraMaterial.LayoutAnchorable, left: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func topBottom(_ anchor: any LyraMaterial.LayoutAnchorable, top: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func center(_ anchor: any LyraMaterial.LayoutAnchorable, offsetX: CoreFoundation.CGFloat = 0, offsetY: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerX(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func centerY(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func width(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func height(_ anchor: any LyraMaterial.LayoutAnchorable, _ offset: CoreFoundation.CGFloat = 0, _ relationer: (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation = LayoutRelationerStruct.equal) -> LyraMaterial.Layout
+  @discardableResult
+  public func edges(_ anchor: any LyraMaterial.LayoutAnchorable, top: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+}
+extension LyraMaterial.Layout {
+  @discardableResult
+  public func below(_ view: UIKit.UIView, _ offset: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func above(_ view: UIKit.UIView, _ offset: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func before(_ view: UIKit.UIView, _ offset: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func after(_ view: UIKit.UIView, _ offset: CoreFoundation.CGFloat = 0) -> LyraMaterial.Layout
+  @discardableResult
+  public func aspect(_ ratio: CoreFoundation.CGFloat = 1) -> LyraMaterial.Layout
+}
+public typealias LayoutRelationer = (LyraMaterial.LayoutRelationerStruct, LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation
+public struct LayoutRelationerStruct {
+  public static func equal(left: LyraMaterial.LayoutRelationerStruct, right: LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation
+}
+public func == (left: LyraMaterial.LayoutRelationerStruct, right: LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation
+public func >= (left: LyraMaterial.LayoutRelationerStruct, right: LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation
+public func <= (left: LyraMaterial.LayoutRelationerStruct, right: LyraMaterial.LayoutRelationerStruct) -> LyraMaterial.LayoutRelation
+@objc(BorderWidthPreset) public enum BorderWidthPreset : Swift.Int {
+  case none
+  case border1
+  case border2
+  case border3
+  case border4
+  case border5
+  case border6
+  case border7
+  case border8
+  case border9
+  public var cgFloatValue: CoreFoundation.CGFloat {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(InterimSpacePreset) public enum InterimSpacePreset : Swift.Int {
+  case none
+  case interimSpace1
+  case interimSpace2
+  case interimSpace3
+  case interimSpace4
+  case interimSpace5
+  case interimSpace6
+  case interimSpace7
+  case interimSpace8
+  case interimSpace9
+  case interimSpace10
+  case interimSpace11
+  case interimSpace12
+  case interimSpace13
+  case interimSpace14
+  case interimSpace15
+  case interimSpace16
+  case interimSpace17
+  case interimSpace18
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias InterimSpace = CoreFoundation.CGFloat
+public func InterimSpacePresetToValue(preset: LyraMaterial.InterimSpacePreset) -> LyraMaterial.InterimSpace
+public enum DepthPreset {
+  case none
+  case depth1
+  case depth2
+  case depth3
+  case depth4
+  case depth5
+  indirect case above(LyraMaterial.DepthPreset)
+  indirect case below(LyraMaterial.DepthPreset)
+  indirect case left(LyraMaterial.DepthPreset)
+  indirect case right(LyraMaterial.DepthPreset)
+  public var rawValue: LyraMaterial.DepthPreset {
+    get
+  }
+}
+public struct Depth {
+  public var offset: LyraMaterial.Offset
+  public var opacity: Swift.Float
+  public var radius: CoreFoundation.CGFloat
+  public var rawValue: (CoreFoundation.CGSize, Swift.Float, CoreFoundation.CGFloat) {
+    get
+  }
+  public var preset: LyraMaterial.DepthPreset {
+    get
+    set
+  }
+  public init(offset: LyraMaterial.Offset = .zero, opacity: Swift.Float = 0, radius: CoreFoundation.CGFloat = 0)
+  public init(preset: LyraMaterial.DepthPreset)
+}
+public func DepthPresetToValue(preset: LyraMaterial.DepthPreset) -> LyraMaterial.Depth
+@objc(EdgeInsetsPreset) public enum EdgeInsetsPreset : Swift.Int {
+  case none
+  case square1
+  case square2
+  case square3
+  case square4
+  case square5
+  case square6
+  case square7
+  case square8
+  case square9
+  case square10
+  case square11
+  case square12
+  case square13
+  case square14
+  case square15
+  case wideRectangle1
+  case wideRectangle2
+  case wideRectangle3
+  case wideRectangle4
+  case wideRectangle5
+  case wideRectangle6
+  case wideRectangle7
+  case wideRectangle8
+  case wideRectangle9
+  case tallRectangle1
+  case tallRectangle2
+  case tallRectangle3
+  case tallRectangle4
+  case tallRectangle5
+  case tallRectangle6
+  case tallRectangle7
+  case tallRectangle8
+  case tallRectangle9
+  case horizontally1
+  case horizontally2
+  case horizontally3
+  case horizontally4
+  case horizontally5
+  case vertically1
+  case vertically2
+  case vertically3
+  case vertically4
+  case vertically5
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias EdgeInsets = UIKit.UIEdgeInsets
+public func EdgeInsetsPresetToValue(preset: LyraMaterial.EdgeInsetsPreset) -> LyraMaterial.EdgeInsets
+extension UIKit.UIColor {
+  convenience public init(argb: Swift.UInt32)
+  convenience public init(rgb: Swift.UInt32)
+}
+@objc(CornerRadiusPreset) public enum CornerRadiusPreset : Swift.Int {
+  case none
+  case cornerRadius1
+  case cornerRadius2
+  case cornerRadius3
+  case cornerRadius4
+  case cornerRadius5
+  case cornerRadius6
+  case cornerRadius7
+  case cornerRadius8
+  case cornerRadius9
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public func CornerRadiusPresetToValue(preset: LyraMaterial.CornerRadiusPreset) -> CoreFoundation.CGFloat
+@objc(SearchBarDelegate) public protocol SearchBarDelegate {
+  @objc optional func searchBar(searchBar: LyraMaterial.SearchBar, didChange textField: UIKit.UITextField, with text: Swift.String?)
+  @objc optional func searchBar(searchBar: LyraMaterial.SearchBar, willClear textField: UIKit.UITextField, with text: Swift.String?)
+  @objc optional func searchBar(searchBar: LyraMaterial.SearchBar, didClear textField: UIKit.UITextField, with text: Swift.String?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SearchBar : LyraMaterial.Bar {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public let textField: UIKit.UITextField
+  @_Concurrency.MainActor(unsafe) open var clearButton: LyraMaterial.IconButton! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any LyraMaterial.SearchBarDelegate)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isClearButtonAutoHandleEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @objc deinit
+}
+extension LyraMaterial.SearchBar {
+  @_Concurrency.MainActor(unsafe) open func layoutTextField()
+  @_Concurrency.MainActor(unsafe) open func layoutLeftView()
+  @_Concurrency.MainActor(unsafe) open func layoutClearButton()
+}
+@objc(ShapePreset) public enum ShapePreset : Swift.Int {
+  case none
+  case square
+  case circle
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias Offset = UIKit.UIOffset
+extension CoreFoundation.CGSize {
+  public var asOffset: LyraMaterial.Offset {
+    get
+  }
+}
+extension UIKit.UIOffset {
+  public init(size: CoreFoundation.CGSize)
+}
+extension UIKit.UIOffset {
+  public var asSize: CoreFoundation.CGSize {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class View : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) final public let visualLayer: QuartzCore.CAShapeLayer
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var image: UIKit.UIImage? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsRect: CoreFoundation.CGRect {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsCenter: CoreFoundation.CGRect {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsScale: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(value)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentsGravity: QuartzCore.CALayerContentsGravity {
+    @objc get
+    @objc set(value)
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func prepare()
+  @objc deinit
+}
+public enum FABMenuBacking {
+  case none
+  case fade
+  case blur
+  public static func == (a: LyraMaterial.FABMenuBacking, b: LyraMaterial.FABMenuBacking) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var fabMenuController: LyraMaterial.FABMenuController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FABMenuController : LyraMaterial.TransitionController {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var fabMenu: LyraMaterial.FABMenu
+  @_Concurrency.MainActor(unsafe) open var fabMenuBacking: LyraMaterial.FABMenuBacking
+  @_Concurrency.MainActor(unsafe) open var fabMenuBackingBlurEffectStyle: UIKit.UIBlurEffect.Style
+  @_Concurrency.MainActor(unsafe) open var blurView: UIKit.UIView? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) override public init(rootViewController: UIKit.UIViewController)
+  @objc deinit
+}
+extension LyraMaterial.FABMenuController : LyraMaterial.FABMenuDelegate {
+}
+public protocol CollectionViewDelegate : UIKit.UICollectionViewDelegate {
+}
+public protocol CollectionViewDataSource : UIKit.UICollectionViewDataSource {
+  var dataSourceItems: [LyraMaterial.DataSourceItem] { get }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var collectionViewController: LyraMaterial.CollectionViewController? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CollectionViewController : LyraMaterial.ViewController {
+  @_Concurrency.MainActor(unsafe) final public let collectionView: LyraMaterial.CollectionView
+  @_Concurrency.MainActor(unsafe) open var dataSourceItems: [LyraMaterial.DataSourceItem]
+  @_Concurrency.MainActor(unsafe) override open func prepare()
+  @_Concurrency.MainActor(unsafe) override open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LyraMaterial.CollectionViewController : LyraMaterial.CollectionViewDelegate {
+}
+extension LyraMaterial.CollectionViewController : LyraMaterial.CollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension LyraMaterial.NavigationDrawerPosition : Swift.Equatable {}
+extension LyraMaterial.NavigationDrawerPosition : Swift.Hashable {}
+extension LyraMaterial.NavigationDrawerPosition : Swift.RawRepresentable {}
+extension LyraMaterial.DisplayStyle : Swift.Equatable {}
+extension LyraMaterial.DisplayStyle : Swift.Hashable {}
+extension LyraMaterial.DisplayStyle : Swift.RawRepresentable {}
+extension LyraMaterial.SnackbarStatus : Swift.Equatable {}
+extension LyraMaterial.SnackbarStatus : Swift.Hashable {}
+extension LyraMaterial.SnackbarStatus : Swift.RawRepresentable {}
+extension LyraMaterial.SnackbarAlignment : Swift.Equatable {}
+extension LyraMaterial.SnackbarAlignment : Swift.Hashable {}
+extension LyraMaterial.SnackbarAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.SwitchState : Swift.Equatable {}
+extension LyraMaterial.SwitchState : Swift.Hashable {}
+extension LyraMaterial.SwitchState : Swift.RawRepresentable {}
+extension LyraMaterial.TabItemState : Swift.Equatable {}
+extension LyraMaterial.TabItemState : Swift.Hashable {}
+extension LyraMaterial.TabItemState : Swift.RawRepresentable {}
+extension LyraMaterial.TabItemLineState : Swift.Equatable {}
+extension LyraMaterial.TabItemLineState : Swift.Hashable {}
+extension LyraMaterial.TabItemLineState : Swift.RawRepresentable {}
+extension LyraMaterial.TabBarLineAlignment : Swift.Equatable {}
+extension LyraMaterial.TabBarLineAlignment : Swift.Hashable {}
+extension LyraMaterial.TabBarLineAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.TabBarStyle : Swift.Equatable {}
+extension LyraMaterial.TabBarStyle : Swift.Hashable {}
+extension LyraMaterial.TabBarStyle : Swift.RawRepresentable {}
+extension LyraMaterial.TabBarCenteringStyle : Swift.Equatable {}
+extension LyraMaterial.TabBarCenteringStyle : Swift.Hashable {}
+extension LyraMaterial.EditorPlaceholderAnimation : Swift.Equatable {}
+extension LyraMaterial.EditorPlaceholderAnimation : Swift.Hashable {}
+extension LyraMaterial.TextFieldPlaceholderAnimation : Swift.Equatable {}
+extension LyraMaterial.TextFieldPlaceholderAnimation : Swift.Hashable {}
+extension LyraMaterial.TextFieldPlaceholderAnimation : Swift.RawRepresentable {}
+extension LyraMaterial.FABMenuItemTitleLabelPosition : Swift.Equatable {}
+extension LyraMaterial.FABMenuItemTitleLabelPosition : Swift.Hashable {}
+extension LyraMaterial.FABMenuItemTitleLabelPosition : Swift.RawRepresentable {}
+extension LyraMaterial.FABMenuDirection : Swift.Equatable {}
+extension LyraMaterial.FABMenuDirection : Swift.Hashable {}
+extension LyraMaterial.FABMenuDirection : Swift.RawRepresentable {}
+extension LyraMaterial.ImageFormat : Swift.Equatable {}
+extension LyraMaterial.ImageFormat : Swift.Hashable {}
+extension LyraMaterial.ImageFormat : Swift.RawRepresentable {}
+extension LyraMaterial.ChipBarAlignment : Swift.Equatable {}
+extension LyraMaterial.ChipBarAlignment : Swift.Hashable {}
+extension LyraMaterial.ChipBarAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.PulseAnimation : Swift.Equatable {}
+extension LyraMaterial.PulseAnimation : Swift.Hashable {}
+extension LyraMaterial.PulseAnimation : Swift.RawRepresentable {}
+extension LyraMaterial.ToolbarAlignment : Swift.Equatable {}
+extension LyraMaterial.ToolbarAlignment : Swift.Hashable {}
+extension LyraMaterial.ToolbarAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.TabBarAlignment : Swift.Equatable {}
+extension LyraMaterial.TabBarAlignment : Swift.Hashable {}
+extension LyraMaterial.TabBarAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.TabBarThemingStyle : Swift.Equatable {}
+extension LyraMaterial.TabBarThemingStyle : Swift.Hashable {}
+extension LyraMaterial.ChipItemStyle : Swift.Equatable {}
+extension LyraMaterial.ChipItemStyle : Swift.Hashable {}
+extension LyraMaterial.ChipItemStyle : Swift.RawRepresentable {}
+extension LyraMaterial.ChipBarStyle : Swift.Equatable {}
+extension LyraMaterial.ChipBarStyle : Swift.Hashable {}
+extension LyraMaterial.ChipBarStyle : Swift.RawRepresentable {}
+extension LyraMaterial.ContentViewAlignment : Swift.Equatable {}
+extension LyraMaterial.ContentViewAlignment : Swift.Hashable {}
+extension LyraMaterial.ContentViewAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.IconButtonThemingStyle : Swift.Equatable {}
+extension LyraMaterial.IconButtonThemingStyle : Swift.Hashable {}
+extension LyraMaterial.SpringDirection : Swift.Equatable {}
+extension LyraMaterial.SpringDirection : Swift.Hashable {}
+extension LyraMaterial.SpringDirection : Swift.RawRepresentable {}
+extension LyraMaterial.DeviceModel : Swift.Equatable {}
+extension LyraMaterial.DeviceModel : Swift.Hashable {}
+extension LyraMaterial.DeviceModel : Swift.RawRepresentable {}
+extension LyraMaterial.DividerAlignment : Swift.Equatable {}
+extension LyraMaterial.DividerAlignment : Swift.Hashable {}
+extension LyraMaterial.DividerAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.GridAxisDirection : Swift.Equatable {}
+extension LyraMaterial.GridAxisDirection : Swift.Hashable {}
+extension LyraMaterial.GridAxisDirection : Swift.RawRepresentable {}
+extension LyraMaterial.SearchBarAlignment : Swift.Equatable {}
+extension LyraMaterial.SearchBarAlignment : Swift.Hashable {}
+extension LyraMaterial.SearchBarAlignment : Swift.RawRepresentable {}
+extension LyraMaterial.BorderWidthPreset : Swift.Equatable {}
+extension LyraMaterial.BorderWidthPreset : Swift.Hashable {}
+extension LyraMaterial.BorderWidthPreset : Swift.RawRepresentable {}
+extension LyraMaterial.InterimSpacePreset : Swift.Equatable {}
+extension LyraMaterial.InterimSpacePreset : Swift.Hashable {}
+extension LyraMaterial.InterimSpacePreset : Swift.RawRepresentable {}
+extension LyraMaterial.EdgeInsetsPreset : Swift.Equatable {}
+extension LyraMaterial.EdgeInsetsPreset : Swift.Hashable {}
+extension LyraMaterial.EdgeInsetsPreset : Swift.RawRepresentable {}
+extension LyraMaterial.CornerRadiusPreset : Swift.Equatable {}
+extension LyraMaterial.CornerRadiusPreset : Swift.Hashable {}
+extension LyraMaterial.CornerRadiusPreset : Swift.RawRepresentable {}
+extension LyraMaterial.ShapePreset : Swift.Equatable {}
+extension LyraMaterial.ShapePreset : Swift.Hashable {}
+extension LyraMaterial.ShapePreset : Swift.RawRepresentable {}
+extension LyraMaterial.FABMenuBacking : Swift.Equatable {}
+extension LyraMaterial.FABMenuBacking : Swift.Hashable {}
