@@ -30,7 +30,7 @@ let package = Package(
             name: "LyraPaymentSDKDependencies",
             dependencies: [
                 .target(name: "LyraPaymentSDK"),
-                .product(name: "SnapKit", package: "SnapKit"),
+                .product(name: "SnapKit-Dynamic", package: "SnapKit"),
                 .product(name: "Sentry", package: "sentry-cocoa"),
                 .product(name: "sentry_client_cocoa", package: "sentry-client-cocoa"),
                 .product(name: "LyraMaterial", package: "LyraMaterial"), // Correcto
