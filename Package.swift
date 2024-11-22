@@ -40,14 +40,7 @@ let package = Package(
             path: "Sources/LyraPaymentSDKDependencies",
             resources: [
                 .process("LyraCardsRecognizer.bundle") // Incluye recursos si es necesario
-            ],
-            linkerSettings: [
-                   .linkedFramework("Sentry"),
-                   .linkedFramework("sentry_client_cocoa"),
-                   .linkedFramework("LyraMaterial"),
-                   .linkedFramework("LyraMotion"),
-                   .linkedFramework("LyraCardsRecognizer")
-               ]
+            ]
         )
     ]
 )
