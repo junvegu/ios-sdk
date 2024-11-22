@@ -10,18 +10,18 @@
       }
     },
     {
-      "identity" : "material",
+      "identity" : "lyramaterial",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/junvegu/Material.git",
+      "location" : "https://github.com/junvegu/LyraMaterial.git",
       "state" : {
-        "revision" : "445447d9f48c270230047678bb119a1a028a2322",
-        "version" : "1.1.0"
+        "branch" : "development",
+        "revision" : "7b6ef4a95957348e121abb13d49e9e8dfa38e83e"
       }
     },
     {
-      "identity" : "motion",
+      "identity" : "lyramotion",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/junvegu/Motion.git",
+      "location" : "https://github.com/junvegu/LyraMotion.git",
       "state" : {
         "revision" : "092c03d7cf65f3bb9187aeb6145bf553e4e7d9ed",
         "version" : "4.1.0"
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/junvegu/sentry-client-cocoa.git",
       "state" : {
-        "revision" : "d78035c7e86ae2933ad9f5c77ea2cb6ff56b4ec1",
-        "version" : "4.0.2"
+        "branch" : "master",
+        "revision" : "bb7dfc3a78aad84d21a2a329c65e95f42b2a9b51"
       }
     },
     {
