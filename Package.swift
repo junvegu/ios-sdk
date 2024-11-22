@@ -25,6 +25,18 @@ let package = Package(
         .binaryTarget(
             name: "LyraPaymentSDK",
             path: "./LyraPaymentSDK.xcframework"
+        ),
+        .target(
+            name: "LyraPaymentSDKDependencies",
+            dependencies: [
+                "SnapKit",
+                "Sentry",
+                "sentry-client-cocoa",
+                "Material",
+                "Motion",
+                "ios-cards-camera-recognizer"
+            ],
+            path: "./Dummy"
         )
     ]
 )
